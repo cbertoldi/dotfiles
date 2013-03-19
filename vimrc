@@ -1,0 +1,258 @@
+set nocompatible
+
+set langmenu=none
+set tw=78
+let $LANG = 'en'
+"set guifont=Monospace\ 8.5 
+set tabstop=4
+set shiftwidth=4
+set hlsearch
+set mouse=a
+syntax enable
+set wildignore=*.swp,*.bak,*.pyc,*.class
+set incsearch
+set scrolloff=1
+
+if &term =~ '^screen'
+  " Page keys http://sourceforge.net/p/tmux/tmux-code/ci/master/tree/FAQ
+  "   execute "set t_kP=\e[5;*~"
+  "     execute "set t_kN=\e[6;*~""]]
+endif
+
+" Stop asking to realod file when changed, just do it
+set autoread
+
+if has("win32")
+  " Windows options here
+ 	set guifont=Lucida_Console:h8:cDEFAULT
+" else
+"   if has("unix")
+"     let s:uname = system("uname")
+"     if s:uname == "Darwin\n"
+"       "Mac options here
+"     endif
+"   endif
+endif
+
+if has("mac")
+	set clipboard=unnamed
+	let g:main_font = "Menlo\\ Regular:h11"
+	let g:small_font = "Menlo\\ Regular:h2"
+else 
+	let g:main_font = "Monospace\\ 8.5"
+	let g:small_font = "Monospace\\ 2"
+endif
+
+" no beeping
+set vb
+
+" I wanna read the errors
+set debug=msg
+
+let filetype_m="objc"
+
+set completeopt=longest,menu,preview
+setlocal omnifunc=syntaxcomplete#Complete
+" autocmd FileType python set omnifunc=pythoncomplete#Complete
+" autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+" autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+" autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+
+" file di configurazione per python
+source ~/.vimrc-python
+
+autocmd FileType * let g:AutoComplPop_CompleteOption = '.,w,b,u,t,i'
+autocmd FileType perl let g:AutoComplPop_CompleteOption = '.,w,b,u,t,k~/.vim/dict/perl.dict'
+autocmd FileType ruby let g:AutoComplPop_CompleteOption = '.,w,b,u,t,i,k~/.vim/dict/ruby.dict'
+autocmd FileType javascript let g:AutoComplPop_CompleteOption = '.,w,b,u,t,i,k~/.vim/dict/javascript.dict'
+autocmd FileType erlang let g:AutoComplPop_CompleteOption = '.,w,b,u,t,i,k~/.vim/dict/erlang.dict'
+autocmd FileType objc let g:AutoComplPop_CompleteOption = '.,w,b,u,t,i,k~/.vim/dict/objc.dict'
+
+autocmd Filetype erlang setlocal dict=~/.vim/dict/erlang.dict
+autocmd Filetype javascript setlocal dict=~/.vim/dict/javascript.dict
+autocmd Filetype html setlocal dict=~/.vim/dict/javascript.dict
+autocmd Filetype java setlocal dict=~/.vim/dict/java.dict
+autocmd Filetype objc setlocal dict=~/.vim/dict/objc.dict
+
+" fa andare il salto basato su ctags con mod:fun
+autocmd FileType erlang setlocal iskeyword+=:
+
+au BufReadCmd *.jar,*.xpi call zip#Browse(expand("<amatch>"))
+
+let g:AutoComplPop_IgnoreCaseOption = 1
+
+if has("gui_running")
+	set lines=60 columns=100
+endif
+
+" let xml_jump_string = "`"
+
+filetype plugin indent on
+set autoindent
+
+set laststatus=2 
+
+if version >= 700 && &term != 'cygwin' && !has('gui_running')
+  " In the color terminal, try to use CSApprox.vim plugin or
+  " guicolorscheme.vim plugin if possible in order to have consistent
+  " colors on different terminals.
+  "
+  " Uncomment one of the following line to force 256 or 88 colors if
+  " your terminal supports it. Or comment both of them if your terminal
+  " supports neither 256 nor 88 colors. Unfortunately, querying the
+  " number of supported colors does not work on all terminals.
+  set t_Co=256
+  if &t_Co == 256 || &t_Co == 88
+    " Check whether to use CSApprox.vim plugin or guicolorscheme.vim plugin.
+    if has('gui') &&
+      \ (filereadable(expand("$HOME/.vim/plugin/CSApprox.vim")) ||
+      \  filereadable(expand("$HOME/vimfiles/plugin/CSApprox.vim")))
+      let s:use_CSApprox = 1
+    elseif filereadable(expand("$HOME/.vim/plugin/guicolorscheme.vim")) ||
+      \    filereadable(expand("$HOME/vimfiles/plugin/guicolorscheme.vim"))
+      let s:use_guicolorscheme = 1
+    endif
+  endif
+endif
+if exists('s:use_CSApprox')
+  " Can use the CSApprox.vim plugin.
+  let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
+  colorscheme desert
+elseif exists('s:use_guicolorscheme')
+  " Can use the guicolorscheme plugin. It needs to be loaded before
+  " running GuiColorScheme (hence the :runtime! command).
+  runtime! plugin/guicolorscheme.vim
+  GuiColorScheme desert
+else
+  colorscheme desert
+endif
+
+"colorscheme desert
+""hi Normal ctermbg=0
+"koehler
+
+set statusline=%F%m%r%h%w\ [FMT=%{&ff}]\[TYPE=%Y]\ [ASCII=\%03.3b]\[HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
+" per koehler, per evening non servono
+hi StatusLine     term=bold,reverse cterm=bold ctermfg=yellow ctermbg=DarkGray gui=bold guifg=#6C6C6C guibg=#FCE94F
+hi StatusLineNC   term=reverse cterm=reverse ctermfg=yellow ctermbg=black gui=reverse guifg=#6C6C6C guibg=#FCE94F
+hi Visual gui=none guifg=#000000 guibg=#c4c4c4
+
+set diffexpr=MyDiff()
+function MyDiff()
+  let opt = '-a --binary '
+  if &diffopt =~ 'icase' | let opt = opt . '-i ' | endif
+  if &diffopt =~ 'iwhite' | let opt = opt . '-b ' | endif
+  let arg1 = v:fname_in
+  if arg1 =~ ' ' | let arg1 = '"' . arg1 . '"' | endif
+  let arg2 = v:fname_new
+  if arg2 =~ ' ' | let arg2 = '"' . arg2 . '"' | endif
+  let arg3 = v:fname_out
+  if arg3 =~ ' ' | let arg3 = '"' . arg3 . '"' | endif
+  let eq = ''
+  if $VIMRUNTIME =~ ' '
+    if &sh =~ '\<cmd'
+      let cmd = '""' . $VIMRUNTIME . '\diff"'
+      let eq = '"'
+    else
+      let cmd = substitute($VIMRUNTIME, ' ', '" ', '') . '\diff"'
+    endif
+  else
+    let cmd = $VIMRUNTIME . '\diff'
+  endif
+  silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3 . eq
+endfunction
+
+function! PoundComment()
+	  map - 0I# <ESC>j
+	  map _ :s/^\s*# \=//g<CR>j
+	  set comments=:#
+endfunction
+
+function! HTMLComment()
+	  map - $a --><ESC>0i<!-- <ESC><CR>
+	  map _ :s/^\s*<!-- \=//g<CR>:s/ \=-->[ \t]*$//g<CR>j
+	  set tw=0 formatoptions=tcq
+endfunction
+
+function! CPlusPlusComment()
+	  map - 0i// <ESC>j
+	  map _ :s/^\s*\/\/ \=//g<CR>j
+	  "set nocindent comments=:\/\/
+endfunction
+
+function! CComment()
+	  map - $a */<ESC>0i/* <ESC><CR>
+	  map _ :s/^\s*\/\* \=//g<CR>:s/ \=\*\/[ \t]*$//g<CR>j
+	  set nocindent comments=sr:/*,mb:*,ex:*/,://
+	  "     set nocindent comments=:/*,://
+endfunction
+
+function! SQLComment()
+	map - 0I-- <ESC>j
+	map _ :s/^\s--//g<CR>j
+endfunction
+
+function! ErlComment()
+	map - 0I% <ESC>j
+	map _ :s/^\s*% \=//g<CR>j
+	set comments=:%
+endfunction
+
+
+if has("autocmd")
+	autocmd FileType html,htm set tabstop=2 formatoptions+=tl sw=2 tw=0
+	autocmd FileType erlang set tabstop=2 sw=2 
+	"autocmd FileType *.py set smarttab expandtab softtabstop=4  
+	"autocmd BufWritePre *.py normal m`:%s/\s\+$//e ``
+	autocmd FileType xml,xsl set tw=0
+	autocmd FileType sh set tw=0 
+	autocmd FileType c,cpp set cindent
+	autocmd FileType objc set tw=120
+
+
+	autocmd FileType sh call PoundComment()
+	autocmd FileType html call HTMLComment()
+	autocmd FileType perl call PoundComment()
+	autocmd FileType c call CComment()
+	autocmd FileType cpp call CPlusPlusComment()
+	autocmd FileType java call CPlusPlusComment()
+	autocmd FileType sql call SQLComment()
+	autocmd FileType erlang call ErlComment()
+	autocmd FileType *.py call PoundComment()
+	autocmd FileType objc call CPlusPlusComment()
+
+endif
+
+" Quickly edit/reload the vimrc file
+nmap <silent> <leader>ev :e $MYVIMRC<CR>
+nmap <silent> <leader>sv :so $MYVIMRC<CR>
+
+" Quickly switch off hlsearch
+nmap <silent> ./ :nohlsearch<CR>
+
+nnoremap <F1> :tabprev <CR>
+nnoremap <F2> :tabnext <CR>
+
+nnoremap <F3> :set invpaste paste?<CR>
+set pastetoggle=<F3>
+set showmode
+
+inoremap kj <ESC>
+
+"Use TAB to complete when typing words, else inserts TABs as usual.
+"Uses dictionary and source files to find matching words to complete.
+
+"See help completion for source,
+"Note: usual completion is on <C-n> but more trouble to press all the time.
+"Never type the same word twice and maybe learn a new spellings!
+"Use the Linux dictionary when spelling is in doubt.
+"Window users can copy the file to their machine.
+function! Tab_Or_Complete()
+  if col('.')>1 && strpart( getline('.'), col('.')-2, 3 ) =~ '^\w'
+    return "\<C-N>"
+  else
+    return "\<Tab>"
+  endif
+endfunction
+
+inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
