@@ -12,11 +12,13 @@ syntax enable
 set wildignore=*.swp,*.bak,*.pyc,*.class
 set incsearch
 set scrolloff=1
+set backupdir=$TMP/
+set directory=$TMP/
 
 if &term =~ '^screen'
   " Page keys http://sourceforge.net/p/tmux/tmux-code/ci/master/tree/FAQ
-  "   execute "set t_kP=\e[5;*~"
-  "     execute "set t_kN=\e[6;*~""]]
+  execute "set t_kP=\e[5;*~"
+  execute "set t_kN=\e[6;*~"
 endif
 
 " Stop asking to realod file when changed, just do it
