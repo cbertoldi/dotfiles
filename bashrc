@@ -1,6 +1,11 @@
+export BASH=$HOME/dotfiles
+
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 		. /etc/bash_completion
 fi
+
+# completion
+. $BASH/bash/git-completion.bash
 
 alias ls="ls -G"
 alias l="ls"
@@ -82,9 +87,9 @@ export SVN_EDITOR="/Applications/MacVim.app/Contents/MacOS/Vim"
 #export TERM=xterm-256color
 if [ -e /usr/share/terminfo/x/xterm-256color ]; then
 	export TERM='xterm-256color'
-elif [[ $(toe | grep -m 1 xterm-256) ]]
+elif [[ $(toe | grep -m 1 256) ]]
 then
-	export TERM='screen-256color'
+	export TERM='screen-it-256color'
 else
 	export TERM='xterm-color'
 fi
