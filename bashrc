@@ -45,7 +45,7 @@ alias erl15b=". /Users/carlo/.kerl/install/r15b/activate"
 export HISTIGNORE="&:ls:pwd:[bf]g:exit:j:fg [0-9]*"
 
 # file da ignorare facendo tab completion
-export FIGNORE=$FIGNORE:svn:DS_Store
+export FIGNORE=$FIGNORE:svn:DS_Store:git
 
 #export PYTHONPATH="/cygdrive/d/python"
 # python site-packages mac os 
