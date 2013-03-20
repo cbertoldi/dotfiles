@@ -203,7 +203,7 @@ endfunction
 
 if has("autocmd")
 	autocmd FileType html,htm set tabstop=2 formatoptions+=tl sw=2 tw=0
-	autocmd FileType erlang set tabstop=2 sw=2 
+	autocmd FileType erlang set tabstop=2 sw=2 tw=80
 	"autocmd FileType *.py set smarttab expandtab softtabstop=4  
 	"autocmd BufWritePre *.py normal m`:%s/\s\+$//e ``
 	autocmd FileType xml,xsl set tw=0
