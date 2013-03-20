@@ -103,7 +103,7 @@ if version >= 700 && &term != 'cygwin' && !has('gui_running')
   " your terminal supports it. Or comment both of them if your terminal
   " supports neither 256 nor 88 colors. Unfortunately, querying the
   " number of supported colors does not work on all terminals.
-  set t_Co=256
+  "set t_Co=256
   if &t_Co == 256 || &t_Co == 88
     " Check whether to use CSApprox.vim plugin or guicolorscheme.vim plugin.
     if has('gui') &&
