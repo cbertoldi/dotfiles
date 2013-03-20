@@ -60,11 +60,12 @@ launchctl setenv PATH $PATH
 #export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/1.6/Home
 # /System/Library/Frameworks/JavaVM.framework/Home/ 1.6
 export JAVA_HOME=`/usr/libexec/java_home`
-export MW_HOME=/Users/carlo/weblogic_server
+export MW_HOME=~/weblogic_server
 export ANT_HOME=/usr/share/ant
 export MAVEN_HOME=/usr/share/maven
 export JONAS_ROOT=/opt/JONAS_4_10_9
-export JBOSS_HOME=/Users/carlo/jboss-5.1.0.GA
+export JBOSS_HOME=~/jboss-5.1.0.GA
+export RLWRAP_HOME=~/rlwrap
 #export PATH=/opt/subversion/bin:/usr/sbin:$JONAS_ROOT/bin/unix:$PATH
 
 #export DYLD_LIBRARY_PATH="/opt/subversion/lib:/usr/lib:$DYLD_LIBRARY_PATH"
