@@ -1,0 +1,2 @@
+# always load it
+. ~/.bashrc
