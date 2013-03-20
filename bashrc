@@ -88,8 +88,6 @@ else
 	export TERM='xterm-color'
 fi
 
-export TERM=screen-256color-bce
-
 growl() { echo -e $'\e]9;'${1}'\007' ; return ; }
 
 growl "Scemo chi legge"
