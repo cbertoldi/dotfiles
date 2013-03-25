@@ -1,0 +1,17 @@
+[user]
+	name = Carlo Bertoldi
+	email = carlo.bertoldi@ubiquity.it
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+[core]
+	excludesfile = /Users/carlo/.gitignore_global
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	unstage = reset HEAD --
+	last = log -1 HEAD
+	vimdiff = "!GIT_PAGER=" GIT_EXTERNAL_DIFF="git_diff_wrapper git diff" 
