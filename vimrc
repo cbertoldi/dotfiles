@@ -109,7 +109,7 @@ if version >= 700 && &term != 'cygwin' && !has('gui_running')
   if &t_Co == 256 || &t_Co == 88
     " Check whether to use CSApprox.vim plugin or guicolorscheme.vim plugin.
     if has('gui') &&
-      \ (filereadable(expand("$HOME/.vim/plugin/CSApprox.vim")) ||
+      \ (filereadable(expand("$HOME/.vim/bundle/CSApprox/plugin/CSApprox.vim")) ||
       \  filereadable(expand("$HOME/vimfiles/plugin/CSApprox.vim")))
       let s:use_CSApprox = 1
     elseif filereadable(expand("$HOME/.vim/plugin/guicolorscheme.vim")) ||
@@ -139,7 +139,7 @@ set statusline=%F%m%r%h%w\ [FMT=%{&ff}]\[TYPE=%Y]\ [ASCII=\%03.3b]\[HEX=\%02.2B]
 " per koehler, per evening non servono
 hi StatusLine     term=bold,reverse cterm=bold ctermfg=yellow ctermbg=DarkGray gui=bold guifg=#6C6C6C guibg=#FCE94F
 hi StatusLineNC   term=reverse cterm=reverse ctermfg=yellow ctermbg=black gui=reverse guifg=#6C6C6C guibg=#FCE94F
-hi Visual gui=none guifg=#000000 guibg=#c4c4c4
+"hi Visual gui=none guifg=#000000 guibg=#c4c4c4
 
 set diffexpr=MyDiff()
 function MyDiff()
@@ -205,7 +205,10 @@ endfunction
 
 if has("autocmd")
 	autocmd FileType html,htm set tabstop=2 formatoptions+=tl sw=2 tw=0
-	autocmd FileType erlang set tabstop=2 sw=2 tw=80
+	autocmd FileType erlang set tabstop=4 sw=2 tw=80 expandtab
+	" no trailing spaces in erlang
+	autocmd BufWritePre *.erl :%s/\s\+$//e
+	autocmd BufWritePre *.hrl :%s/\s\+$//e
 	"autocmd FileType *.py set smarttab expandtab softtabstop=4  
 	"autocmd BufWritePre *.py normal m`:%s/\s\+$//e ``
 	autocmd FileType xml,xsl set tw=0
