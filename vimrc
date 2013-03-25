@@ -15,6 +15,8 @@ set scrolloff=1
 set backupdir=$TMP/
 set directory=$TMP/
 
+call pathogen#infect()
+
 if &term =~ '^screen'
   " Page keys http://sourceforge.net/p/tmux/tmux-code/ci/master/tree/FAQ
   execute "set t_kP=\e[5;*~"

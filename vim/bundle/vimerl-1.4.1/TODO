@@ -1,0 +1,2 @@
+- Make the code indenting more similar to the Emacs erlang-mode.
+- Handle code indenting in files like `.app'.
