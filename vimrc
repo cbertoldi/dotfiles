@@ -208,7 +208,7 @@ endfunction
 
 if has("autocmd")
 	autocmd FileType html,htm set tabstop=2 formatoptions+=tl sw=2 tw=0
-	autocmd FileType erlang set tabstop=4 sw=2 tw=80 expandtab
+	autocmd FileType erlang set tabstop=4 sw=4 tw=80 expandtab
 	" no trailing spaces 
 	autocmd FileType c,cpp,java,php,erlang autocmd BufWritePre <buffer> :%s/\s\+$//e
 	"autocmd FileType *.py set smarttab expandtab softtabstop=4  
