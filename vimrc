@@ -208,7 +208,7 @@ endfunction
 
 if has("autocmd")
 	autocmd FileType html,htm set tabstop=2 formatoptions+=tl sw=2 tw=0
-	autocmd FileType erlang set tabstop=4 sw=4 tw=80 expandtab
+	autocmd FileType erlang set tabstop=4 sw=4 tw=80 expandtab formatoptions-=ro
 	" no trailing spaces 
 	autocmd FileType c,cpp,java,php,erlang autocmd BufWritePre <buffer> :%s/\s\+$//e
 	"autocmd FileType *.py set smarttab expandtab softtabstop=4  
@@ -246,6 +246,7 @@ nnoremap <F3> :set invpaste paste?<CR>
 set pastetoggle=<F3>
 set showmode
 
+" If you need to use vim on a keyboard with an insanely positioned default ESC key.
 inoremap kj <ESC>
 
 "Use TAB to complete when typing words, else inserts TABs as usual.
