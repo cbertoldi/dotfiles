@@ -1,4 +1,4 @@
-export BASH=$HOME/dotfiles
+export DOTFILES=$HOME/dotfiles
 
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 		. /etc/bash_completion
@@ -10,33 +10,20 @@ then
 fi
 
 # completion
-. $BASH/bash/git-completion.bash
+. $DOTFILES/bash/git-completion.bash
 
-alias ls="ls -G"
-alias l="ls"
-alias la="ls -aG"
-alias ll="ls -alG"
-alias less="less -M -x2"
-alias jad="jad -s java"
-alias ..="cd .."
-alias j="jobs"
-alias gdb="gdb -q"
+. $DOTFILES/bash/aliases
+
 
 # mac 
 if [ "$(uname -s)" == "Darwin" ]
 then
-	alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
-	alias vi="/Applications/MacVim.app/Contents/MacOS/Vim"
-	alias view="/Applications/MacVim.app/Contents/MacOS/Vim -R"
-	alias mplayer="/Applications/MPlayer\ OSX\ Extended.app/Contents/Resources/Binaries/mpextended.mpBinaries/Contents/MacOS/mplayer"
-	alias python="/usr/local/bin/python"
-
 	# ruby MacOS
 	[[ -s "/Users/carlo/.rvm/scripts/rvm" ]] && source "/Users/carlo/.rvm/scripts/rvm"
 	# Java
 	export JAVA_HOME=`/usr/libexec/java_home`
 	launchctl setenv PATH $PATH
-	export PATH=/usr/local/git/bin:/opt/subversion/bin:$PATH:/sw/bin:/usr/local/mysql/bin:/usr/share/maven/bin:/opt/local/bin:~/bin:$PYTHONPATH
+	export PATH=$DOTFILES/bin/:/usr/local/git/bin:/opt/subversion/bin:$PATH:/sw/bin:/usr/local/mysql/bin:/usr/share/maven/bin:/opt/local/bin:~/bin:$PYTHONPATH
 
 	# compiler settings
 	export LDFLAGS='-L/opt/local/lib'
@@ -73,7 +60,15 @@ export FIGNORE=$FIGNORE:svn:DS_Store:git
 # /Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/
 PYTHONPATH=/Library/Frameworks/Python.framework/Versions/2.7/bin/
 
+shopt -s nocaseglob
 shopt -s cdspell
+
+# Enable some Bash 4 features when possible:
+# * `autocd`, e.g. `**/qux` will enter `./foo/bar/baz/qux`
+# * Recursive globbing, e.g. `echo **/*.txt`
+for option in autocd globstar; do
+	shopt -s "$option" 2> /dev/null
+done
 
 set -o vi
 

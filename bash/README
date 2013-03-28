@@ -1,0 +1,6 @@
+How to update bash to the latest version on Mac OS X.
+Download and compile the latest version. You can find a prebuilt one in
+../bin/bash
+
+sudo bash -c "echo /usr/local/bin/bash >> /private/etc/shells"
+chsh

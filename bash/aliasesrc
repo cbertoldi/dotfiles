@@ -1,0 +1,27 @@
+# Detect which `ls` flavor is in use
+if ls --color > /dev/null 2>&1;
+then # GNU `ls`
+	colorflag="--color"
+else # OS X `ls`
+	colorflag="-G"
+fi
+
+# List all files colorized in long format
+alias ls="ls -l ${colorflag}"
+alias l="ls"
+alias la="ls -aG"
+alias ll="ls -alG"
+alias less="less -M -x2"
+alias jad="jad -s java"
+alias ..="cd .."
+alias j="jobs"
+alias gdb="gdb -q"
+
+if [ "$(uname -s)" == "Darwin" ]
+then
+	alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
+	alias vi="/Applications/MacVim.app/Contents/MacOS/Vim"
+	alias view="/Applications/MacVim.app/Contents/MacOS/Vim -R"
+	alias mplayer="/Applications/MPlayer\ OSX\ Extended.app/Contents/Resources/Binaries/mpextended.mpBinaries/Contents/MacOS/mplayer"
+	alias python="/usr/local/bin/python"
+fi
