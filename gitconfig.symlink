@@ -6,7 +6,8 @@
 	status = auto
 	branch = auto
 [core]
-	excludesfile = /Users/carlo/.gitignore_global
+	excludesfile = ~/.gitignore_global
+	editor = vim
 [alias]
 	co = checkout
 	br = branch
@@ -15,3 +16,5 @@
 	unstage = reset HEAD --
 	last = log -1 HEAD
 	vimdiff = "!GIT_PAGER=" GIT_EXTERNAL_DIFF="git_diff_wrapper git diff" 
+[help]
+	autocorrect = 1
