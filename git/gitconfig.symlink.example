@@ -1,0 +1,44 @@
+# Sample gitconfig
+#
+
+[hub]
+        protocol = https
+[user]
+        name = AUTHORNAME
+        email = AUTHOREMAIL
+        helper = osxkeychain
+[alias]
+		co = checkout
+		br = branch
+		ci = commit
+		st = status
+		unstage = reset HEAD --
+		last = log -1 HEAD
+		vimdiff = "!GIT_PAGER=" GIT_EXTERNAL_DIFF="git_diff_wrapper git diff" 
+
+        promote = !$DOTFILES/bin/git-promote
+        wtf = !$DOTFILES/bin/git-wtf
+        rank-contributers = !$DOTFILES/bin/git-rank-contributers
+        count = !git shortlog -sn
+[color]
+        diff = auto
+        status = auto
+        branch = auto
+        ui = true
+[core]
+		excludesfile = ~/.gitignore_global
+        editor = vim
+[apply]
+        whitespace = nowarn
+[mergetool]
+        keepBackup = true 
+[difftool]
+        prompt = false
+[help]
+        autocorrect = 1
+[push]
+        # See `git help config` (search for push.default)
+        # for more information on different options of the below setting.
+        #
+        # Setting to git 2.0 default to surpress warning message
+        default = simple
