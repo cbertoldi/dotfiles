@@ -1,18 +1,18 @@
 [submodule "vim/bundle/command-t"]
-	path = vim/bundle/command-t
+	path = vim.symlink/bundle/command-t
 	url = https://github.com/wincent/Command-T.git
 [submodule "vim/bundle/syntastic"]
-	path = vim/bundle/syntastic
+	path = vim.symlink/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
 [submodule "vim/bundle/vim-surround"]
-	path = vim/bundle/vim-surround
+	path = vim.symlink/bundle/vim-surround
 	url = https://github.com/tpope/vim-surround.git
 [submodule "vim/bundle/delimitMate"]
-	path = vim/bundle/delimitMate
+	path = vim.symlink/bundle/delimitMate
 	url = https://github.com/Raimondi/delimitMate.git
 [submodule "vim/bundle/vimerl"]
-	path = vim/bundle/vimerl
+	path = vim.symlink/bundle/vimerl
 	url = https://github.com/jimenezrick/vimerl.git
 [submodule "vim/vim-pathogen"]
-	path = vim/vim-pathogen
+	path = vim.symlink/vim-pathogen
 	url = https://github.com/tpope/vim-pathogen.git
