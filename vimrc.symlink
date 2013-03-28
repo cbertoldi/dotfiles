@@ -64,7 +64,7 @@ setlocal omnifunc=syntaxcomplete#Complete
 " autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 
 " file di configurazione per python
-source ~/.vimrc-python
+source ~/.vim/vimrc-python
 
 autocmd FileType * let g:AutoComplPop_CompleteOption = '.,w,b,u,t,i'
 autocmd FileType perl let g:AutoComplPop_CompleteOption = '.,w,b,u,t,k~/.vim/dict/perl.dict'
