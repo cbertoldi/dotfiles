@@ -16,3 +16,6 @@
 [submodule "vim.symlink/vim-pathogen"]
 	path = vim.symlink/vim-pathogen
 	url = https://github.com/tpope/vim-pathogen.git
+[submodule "vim.symlink/bundle/vim-colors-solarized"]
+	path = vim.symlink/bundle/vim-colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized.git
