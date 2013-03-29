@@ -19,3 +19,6 @@
 [submodule "vim.symlink/bundle/vim-colors-solarized"]
 	path = vim.symlink/bundle/vim-colors-solarized
 	url = https://github.com/altercation/vim-colors-solarized.git
+[submodule "vim.symlink/bundle/vim-fugitive"]
+	path = vim.symlink/bundle/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
