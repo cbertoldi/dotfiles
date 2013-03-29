@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>NSWindow Frame SUStatusFrame</key>
+	<string>549 561 384 129 0 0 1440 878 </string>
+	<key>SUFeedURL</key>
+	<string>http://pqrs.org/macosx/keyremap4macbook/files/appcast-devel.xml</string>
+	<key>SULastCheckTime</key>
+	<date>2013-03-28T08:06:39Z</date>
+	<key>WebKitDefaultFontSize</key>
+	<integer>11</integer>
+	<key>WebKitStandardFont</key>
+	<string>Lucida Grande</string>
+	<key>configList</key>
+	<array>
+		<dict>
+			<key>identify</key>
+			<string>config_1312190399_682638</string>
+			<key>name</key>
+			<string>MBP</string>
+		</dict>
+		<dict>
+			<key>identify</key>
+			<string>config_1355387887_205252</string>
+			<key>name</key>
+			<string>MS</string>
+		</dict>
+	</array>
+	<key>config_1312190399_682638</key>
+	<dict>
+		<key>private.control_functional_to_control_fkeys</key>
+		<integer>1</integer>
+		<key>remap.controlL2fn</key>
+		<integer>1</integer>
+		<key>remap.fn2controlL</key>
+		<integer>1</integer>
+		<key>remap.fn_fkeys_to_consumer_f1</key>
+		<integer>1</integer>
+		<key>remap.fn_fkeys_to_consumer_f10</key>
+		<integer>1</integer>
+		<key>remap.fn_fkeys_to_consumer_f3_snow</key>
+		<integer>1</integer>
+		<key>remap.fn_fkeys_to_consumer_f5</key>
+		<integer>1</integer>
+		<key>remap.fn_fkeys_to_consumer_f7</key>
+		<integer>1</integer>
+		<key>remap.pc_application2escape</key>
+		<integer>1</integer>
+		<key>remap.uk_section2backquote</key>
+		<integer>1</integer>
+		<key>remap.vimnormal_commandr_toggle</key>
+		<integer>1</integer>
+		<key>repeat.initial_wait</key>
+		<integer>400</integer>
+		<key>repeat.wait</key>
+		<integer>33</integer>
+	</dict>
+	<key>config_1355387887_205252</key>
+	<dict>
+		<key>private.control_functional_to_control_fkeys</key>
+		<integer>1</integer>
+		<key>remap.commandR2optionR</key>
+		<integer>1</integer>
+		<key>remap.fn_fkeys_to_consumer_f1</key>
+		<integer>1</integer>
+		<key>remap.fn_fkeys_to_consumer_f10</key>
+		<integer>1</integer>
+		<key>remap.fn_fkeys_to_consumer_f3_snow</key>
+		<integer>1</integer>
+		<key>remap.fn_fkeys_to_consumer_f5</key>
+		<integer>1</integer>
+		<key>remap.fn_fkeys_to_consumer_f7</key>
+		<integer>1</integer>
+		<key>remap.pc_application2escape</key>
+		<integer>1</integer>
+		<key>remap.uk_section2backquote</key>
+		<integer>1</integer>
+		<key>remap.vimnormal_commandr_toggle</key>
+		<integer>1</integer>
+		<key>repeat.wait</key>
+		<integer>43</integer>
+	</dict>
+	<key>isCheckUpdate</key>
+	<integer>2</integer>
+	<key>isQuitByHand</key>
+	<false/>
+	<key>isShowSettingNameInStatusBar</key>
+	<true/>
+	<key>isStatusbarEnable</key>
+	<true/>
+	<key>selectedIndex</key>
+	<integer>1</integer>
+</dict>
+</plist>
