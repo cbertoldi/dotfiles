@@ -80,7 +80,6 @@ export LSCOLORS="exgxcxdxcxegedabagacad"
 export MW_HOME=~/weblogic_server
 export ANT_HOME=/usr/share/ant
 export MAVEN_HOME=/usr/share/maven
-export JONAS_ROOT=/opt/JONAS_4_10_9
 export JBOSS_HOME=~/jboss-5.1.0.GA
 export RLWRAP_HOME=~/rlwrap
 
