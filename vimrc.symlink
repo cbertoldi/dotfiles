@@ -25,11 +25,6 @@ if &term =~ '^screen'
   execute "set t_kN=\e[6;*~"
 endif
 
-" change color scheme when in diff mode
-" if &diff
-" 	colorscheme solarized
-" endif
-
 " Stop asking to realod file when changed, just do it
 set autoread
 
@@ -285,3 +280,7 @@ inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
 " highlight current line
 nnoremap <Leader>c :set cursorline!<CR>
 map Q :qa<CR>
+
+if &diff
+	map <C-R> :diffupdate<CR>
+endif
