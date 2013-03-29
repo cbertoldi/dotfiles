@@ -128,14 +128,14 @@ endif
 if exists('s:use_CSApprox')
   " Can use the CSApprox.vim plugin.
   let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
-  colorscheme desert
+  colorscheme my_desert
 elseif exists('s:use_guicolorscheme')
   " Can use the guicolorscheme plugin. It needs to be loaded before
   " running GuiColorScheme (hence the :runtime! command).
   runtime! plugin/guicolorscheme.vim
-  GuiColorScheme desert
+  GuiColorScheme my_desert
 else
-  colorscheme desert
+  colorscheme my_desert
 endif
 
 "colorscheme desert
@@ -148,20 +148,14 @@ set statusline=%F%m%r%h%w\ [FMT=%{&ff}]\[TYPE=%Y]\ [ASCII=\%03.3b]\[HEX=\%02.2B]
 hi Visual gui=none guifg=#000000 guibg=#c4c4c4
 
 " some custom colors
-hi statusline term=bold,reverse cterm=bold ctermfg=240 ctermbg=221 gui=bold guifg=#6C6C6C guibg=#FCE94F
-hi StatusLineNC term=bold,reverse cterm=reverse ctermfg=240 ctermbg=221 gui=bold guifg=#6C6C6C guibg=#FCE94F
-hi LineNr ctermfg=221
+" hi statusline term=bold,reverse cterm=bold ctermfg=240 ctermbg=221 gui=bold guifg=#6C6C6C guibg=#FCE94F
+" hi StatusLineNC term=bold,reverse cterm=reverse ctermfg=240 ctermbg=221 gui=bold guifg=#6C6C6C guibg=#FCE94F
+" hi LineNr ctermfg=221
 
-hi DiffAdd ctermbg=222 ctermfg=240
-hi DiffDelete ctermbg=203 ctermfg=white
-hi DiffChange ctermbg=242 ctermfg=white
-hi DiffText ctermbg=242 ctermfg=222
-
-"hi DiffAdd
-"hi DiffChange
-"hi DiffDelete
-" Changed text withing a changed line
-"hi DiffText
+" hi DiffAdd ctermbg=222 ctermfg=240
+" hi DiffDelete ctermbg=203 ctermfg=white
+" hi DiffChange ctermbg=242 ctermfg=white
+" hi DiffText ctermbg=242 ctermfg=222
 
 let Tlist_Ctags_Cmd='/opt/local/bin/ctags'
 
