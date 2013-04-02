@@ -9,8 +9,8 @@ hi ModeMsg         cterm=NONE term=bold cterm=bold ctermfg=178 gui=bold guifg=go
 hi LineNr          cterm=NONE term=underline ctermfg=221 guifg=Yellow
 hi CursorLineNr    cterm=NONE term=bold cterm=bold ctermfg=226 gui=bold guifg=Yellow
 hi Question        cterm=NONE term=standout cterm=bold ctermfg=48 gui=bold guifg=springgreen
-hi StatusLine      cterm=NONE term=bold,reverse cterm=bold ctermfg=242 ctermbg=221 gui=bold guifg=#6C6C6C guibg=#FCE94F
-hi StatusLineNC    cterm=NONE term=reverse cterm=reverse ctermfg=221 ctermbg=242 gui=reverse guifg=#6C6C6C guibg=#FCE94F
+hi StatusLine      cterm=NONE term=bold cterm=bold ctermfg=242 ctermbg=221 gui=bold guifg=#6C6C6C guibg=#FCE94F
+hi StatusLineNC    cterm=NONE ctermfg=221 ctermbg=242 guifg=#6C6C6C guibg=#FCE94F
 hi VertSplit       cterm=NONE term=reverse ctermfg=244 ctermbg=145 guifg=grey50 guibg=#c2bfa5
 hi Title           cterm=NONE term=bold cterm=bold ctermfg=167 gui=bold guifg=indianred
 hi Visual          cterm=NONE term=reverse ctermfg=16 ctermbg=251 guifg=#000000 guibg=#c4c4c4
