@@ -3,14 +3,14 @@ hi NonText         cterm=NONE term=bold cterm=bold ctermfg=152 ctermbg=239 gui=b
 hi Directory       cterm=NONE term=bold ctermfg=51 guifg=Cyan
 hi ErrorMsg        cterm=NONE term=standout ctermfg=231 ctermbg=196 guifg=White guibg=Red
 hi IncSearch       cterm=NONE term=reverse cterm=reverse ctermfg=222 ctermbg=66 gui=reverse guifg=slategrey guibg=khaki
-hi Search          cterm=NONE term=reverse ctermfg=194 ctermbg=239 guifg=#dfffdf guibg=grey30
+hi Search          cterm=NONE term=reverse ctermfg=237 ctermbg=215 guifg=#3a3a3a guibg=#ffaf5f
 hi MoreMsg         cterm=NONE term=bold cterm=bold ctermfg=29 gui=bold guifg=SeaGreen
 hi ModeMsg         cterm=NONE term=bold cterm=bold ctermfg=178 gui=bold guifg=goldenrod
-hi LineNr          cterm=NONE term=underline ctermfg=221 guifg=Yellow
+hi LineNr          cterm=NONE term=underline ctermfg=221 guifg=#ffd75f guibg=grey20
 hi CursorLineNr    cterm=NONE term=bold cterm=bold ctermfg=226 gui=bold guifg=Yellow
 hi Question        cterm=NONE term=standout cterm=bold ctermfg=48 gui=bold guifg=springgreen
-hi StatusLine      cterm=NONE term=bold cterm=bold ctermfg=242 ctermbg=221 gui=bold guifg=#6C6C6C guibg=#FCE94F
-hi StatusLineNC    cterm=NONE ctermfg=221 ctermbg=242 guifg=#6C6C6C guibg=#FCE94F
+hi StatusLine      cterm=NONE term=bold cterm=bold ctermfg=242 ctermbg=221 gui=bold guifg=#6C6C6C guibg=#ffd75f
+hi StatusLineNC    cterm=NONE ctermfg=221 ctermbg=242 guibg=#6C6C6C guifg=#ffd75f 
 hi VertSplit       cterm=NONE term=reverse ctermfg=244 ctermbg=145 guifg=grey50 guibg=#c2bfa5
 hi Title           cterm=NONE term=bold cterm=bold ctermfg=167 gui=bold guifg=indianred
 hi Visual          cterm=NONE term=reverse ctermfg=16 ctermbg=251 guifg=#000000 guibg=#c4c4c4
@@ -29,10 +29,10 @@ hi SpellBad        cterm=NONE term=reverse cterm=undercurl gui=undercurl guisp=R
 hi SpellCap        cterm=NONE term=reverse cterm=undercurl gui=undercurl guisp=Blue
 hi SpellRare       cterm=NONE term=reverse cterm=undercurl gui=undercurl guisp=Magenta
 hi SpellLocal      cterm=NONE term=underline cterm=undercurl gui=undercurl guisp=Cyan
-hi Pmenu           cterm=NONE ctermbg=201 guibg=Magenta
-hi PmenuSel        cterm=NONE ctermbg=248 guibg=DarkGrey
-hi PmenuSbar       cterm=NONE ctermbg=250 guibg=Grey
-hi PmenuThumb      cterm=NONE ctermbg=231 guibg=White
+hi Pmenu           cterm=NONE term=reverse ctermfg=0 ctermbg=13 gui=reverse guifg=#839496 guibg=#073642
+hi PmenuSel        cterm=NONE ctermfg=8 ctermbg=0 gui=reverse guifg=#586e75 guibg=#eee8d5 
+hi PmenuSbar       cterm=NONE ctermbg=7 gui=reverse guifg=#eee8d5 guibg=#839496
+hi PmenuThumb      cterm=NONE ctermbg=15 gui=reverse guifg=#839496 guibg=#002b36
 hi TabLine         cterm=NONE term=underline cterm=underline ctermbg=248 gui=underline guibg=DarkGrey
 hi TabLineSel      cterm=NONE term=bold cterm=bold gui=bold
 hi TabLineFill     cterm=NONE term=reverse cterm=reverse gui=reverse
