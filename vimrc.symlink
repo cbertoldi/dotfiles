@@ -29,7 +29,6 @@ endif
 set autoread
 
 if has("win32")
-  " Windows options here
  	set guifont=Lucida_Console:h8:cDEFAULT
 " else
 "   if has("unix")
@@ -38,9 +37,7 @@ if has("win32")
 "       "Mac options here
 "     endif
 "   endif
-endif
-
-if has("mac")
+elseif has("mac")
 	set clipboard=unnamed
 	let g:main_font = "Menlo\\ Regular:h11"
 	let g:small_font = "Menlo\\ Regular:h2"
