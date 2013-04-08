@@ -11,9 +11,9 @@ fi
 
 # completion
 . $DOTFILES/bash/git-completion.bash
+. $DOTFILES/bash/rebar-completion.bash
 
 . $DOTFILES/bash/aliases
-
 
 # mac 
 if [ "$(uname -s)" == "Darwin" ]
