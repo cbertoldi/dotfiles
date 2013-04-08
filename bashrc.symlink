@@ -85,6 +85,9 @@ export ANT_HOME=/usr/share/ant
 export MAVEN_HOME=/usr/share/maven
 export JBOSS_HOME=~/jboss-5.1.0.GA
 export RLWRAP_HOME=~/rlwrap
+export LANG="en_US"
+export LANGUAGE="en_US"
+export LC_ALL="en_US.UTF-8"
 
 #export TERM=xterm-256color
 if [ -e /usr/share/terminfo/x/xterm-256color ]; then
