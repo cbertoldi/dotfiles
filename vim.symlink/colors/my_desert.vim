@@ -29,29 +29,29 @@ hi SpellBad        cterm=NONE term=reverse cterm=undercurl gui=undercurl guisp=R
 hi SpellCap        cterm=NONE term=reverse cterm=undercurl gui=undercurl guisp=Blue
 hi SpellRare       cterm=NONE term=reverse cterm=undercurl gui=undercurl guisp=Magenta
 hi SpellLocal      cterm=NONE term=underline cterm=undercurl gui=undercurl guisp=Cyan
-hi Pmenu           cterm=NONE term=reverse ctermfg=0 ctermbg=13 gui=reverse guifg=#839496 guibg=#073642
-hi PmenuSel        cterm=NONE ctermfg=8 ctermbg=0 gui=reverse guifg=#586e75 guibg=#eee8d5 
+hi Pmenu           cterm=NONE term=reverse ctermfg=221 ctermbg=242 guibg=#6C6C6C guifg=#ffd75f 
+hi PmenuSel        cterm=NONE term=reverse ctermfg=242 ctermbg=221 gui=bold guifg=#6C6C6C guibg=#ffd75f
 hi PmenuSbar       cterm=NONE ctermbg=7 gui=reverse guifg=#eee8d5 guibg=#839496
 hi PmenuThumb      cterm=NONE ctermbg=15 gui=reverse guifg=#839496 guibg=#002b36
-hi TabLine         cterm=NONE term=underline cterm=underline ctermbg=248 gui=underline guibg=DarkGrey
-hi TabLineSel      cterm=NONE term=bold cterm=bold gui=bold
-hi TabLineFill     cterm=NONE term=reverse cterm=reverse gui=reverse
+hi TabLine         cterm=NONE term=underline cterm=underline ctermfg=221 ctermbg=242 gui=underline guibg=#6C6C6C 
+hi TabLineSel      cterm=NONE term=bold ctermfg=239 ctermbg=222 gui=bold
+hi TabLineFill     cterm=NONE term=reverse ctermbg=242 gui=reverse
 hi CursorColumn    cterm=NONE term=reverse ctermbg=241 guibg=Grey40
 hi CursorLine      cterm=NONE term=underline ctermbg=241 guibg=Grey40
 hi ColorColumn     cterm=NONE term=reverse ctermbg=88 guibg=DarkRed
 hi Cursor          cterm=NONE ctermfg=222 ctermbg=167 guifg=khaki guibg=indianred
 hi lCursor         cterm=NONE ctermfg=236 ctermbg=231 guifg=bg guibg=fg
-hi MatchParen      cterm=NONE term=reverse ctermfg=194 ctermbg=239 guifg=#dfffdf guibg=grey30
+hi MatchParen      cterm=NONE term=reverse ctermfg=242 ctermbg=221 guibg=#6C6C6C guifg=#ffd75f
 hi Normal          cterm=NONE ctermfg=231 ctermbg=236 guifg=White guibg=grey20
 hi Comment         cterm=NONE term=bold ctermfg=116 guifg=SkyBlue
-hi Constant        cterm=NONE term=underline ctermfg=217 guifg=#ffa0a0
+hi Constant        cterm=NONE term=underline ctermfg=217 guifg=#ffafaf
 hi Special         cterm=NONE term=bold ctermfg=223 guifg=navajowhite
 hi Identifier      cterm=NONE term=underline ctermfg=120 guifg=palegreen
 hi Statement       cterm=NONE term=bold cterm=bold ctermfg=222 gui=bold guifg=khaki
 hi PreProc         cterm=NONE term=underline ctermfg=167 guifg=indianred
 hi Type            cterm=NONE term=underline cterm=bold ctermfg=143 gui=bold guifg=darkkhaki
 hi Underlined      cterm=NONE term=underline cterm=underline ctermfg=111 gui=underline guifg=#80a0ff
-hi Ignore          cterm=NONE ctermfg=241 guifg=grey40
+hi Ignore          cterm=NONE ctermfg=250 guifg=#bcbcbc
 hi Error           cterm=NONE term=reverse ctermfg=231 ctermbg=196 guifg=White guibg=Red
 hi Todo            cterm=NONE term=standout ctermfg=202 ctermbg=226 guifg=orangered guibg=yellow2
 " hi String          links to Constant
