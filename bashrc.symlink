@@ -65,6 +65,7 @@ PYTHONPATH=/Library/Frameworks/Python.framework/Versions/2.7/bin/
 
 shopt -s nocaseglob
 shopt -s cdspell
+shopt -s extglob
 
 # Enable some Bash 4 features when possible:
 # * `autocd`, e.g. `**/qux` will enter `./foo/bar/baz/qux`
