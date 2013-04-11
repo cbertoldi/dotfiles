@@ -54,6 +54,7 @@ hi Underlined      cterm=NONE term=underline cterm=underline ctermfg=111 gui=und
 hi Ignore          cterm=NONE ctermfg=250 guifg=#bcbcbc
 hi Error           cterm=NONE term=reverse ctermfg=231 ctermbg=196 guifg=White guibg=Red
 hi Todo            cterm=NONE term=standout ctermfg=202 ctermbg=226 guifg=orangered guibg=yellow2
+hi String          cterm=NONE term=underline ctermfg=217 guifg=#ffafaf
 " hi String          links to Constant
 " hi Character       links to Constant
 " hi Number          links to Constant
@@ -401,3 +402,6 @@ hi Todo            cterm=NONE term=standout ctermfg=202 ctermbg=226 guifg=orange
 " hi htmlStatement   links to Statement
 " hi None            cleared
 " hi htmlSpecial     links to Special
+
+" This command show the highlight settings for the string under the cursor
+" echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'. synIDattr(synID(line("."),col("."),0),"name") . "> lo<". synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"
