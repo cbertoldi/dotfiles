@@ -1,13 +1,13 @@
 [user]
 	name = Carlo Bertoldi
-	email = carlo.bertoldi@ubiquity.it
+	email = mcbain@tiscali.it
 [color]
 	diff = auto
 	status = auto
 	branch = auto
 [core]
 	excludesfile = ~/.gitignore_global
-	editor = vim
+	editor = mvim -v
 [alias]
 	co = checkout
 	br = branch
