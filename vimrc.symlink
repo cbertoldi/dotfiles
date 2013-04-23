@@ -65,24 +65,6 @@ setlocal omnifunc=syntaxcomplete#Complete
 " file di configurazione per python
 source ~/.vim/vimrc-python
 
-autocmd FileType * let g:AutoComplPop_CompleteOption = '.,w,b,u,t,i'
-autocmd FileType perl let g:AutoComplPop_CompleteOption = '.,w,b,u,t,k~/.vim/dict/perl.dict'
-autocmd FileType ruby let g:AutoComplPop_CompleteOption = '.,w,b,u,t,i,k~/.vim/dict/ruby.dict'
-autocmd FileType javascript let g:AutoComplPop_CompleteOption = '.,w,b,u,t,i,k~/.vim/dict/javascript.dict'
-autocmd FileType erlang let g:AutoComplPop_CompleteOption = '.,w,b,u,t,i,k~/.vim/dict/erlang.dict'
-autocmd FileType objc let g:AutoComplPop_CompleteOption = '.,w,b,u,t,i,k~/.vim/dict/objc.dict'
-
-autocmd Filetype erlang setlocal dict=~/.vim/dict/erlang.dict
-autocmd Filetype javascript setlocal dict=~/.vim/dict/javascript.dict
-autocmd Filetype html setlocal dict=~/.vim/dict/javascript.dict
-autocmd Filetype java setlocal dict=~/.vim/dict/java.dict
-autocmd Filetype objc setlocal dict=~/.vim/dict/objc.dict
-
-" fa andare il salto basato su ctags con mod:fun
-autocmd FileType erlang setlocal iskeyword+=:
-
-au BufReadCmd *.jar,*.xpi call zip#Browse(expand("<amatch>"))
-
 let g:AutoComplPop_IgnoreCaseOption = 1
 
 if has("gui_running")
@@ -221,7 +203,7 @@ if has("autocmd")
 	autocmd FileType sh set tw=0 
 	autocmd FileType c,cpp set cindent
 	autocmd FileType objc set tw=120
-
+	autocmd FileType markdown set expandtab tabstop=4 sw=4 tw=80
 
 	autocmd FileType sh call PoundComment()
 	autocmd FileType html call HTMLComment()
@@ -234,6 +216,23 @@ if has("autocmd")
 	autocmd FileType *.py call PoundComment()
 	autocmd FileType objc call CPlusPlusComment()
 
+	autocmd FileType * let g:AutoComplPop_CompleteOption = '.,w,b,u,t,i'
+	autocmd FileType perl let g:AutoComplPop_CompleteOption = '.,w,b,u,t,k~/.vim/dict/perl.dict'
+	autocmd FileType ruby let g:AutoComplPop_CompleteOption = '.,w,b,u,t,i,k~/.vim/dict/ruby.dict'
+	autocmd FileType javascript let g:AutoComplPop_CompleteOption = '.,w,b,u,t,i,k~/.vim/dict/javascript.dict'
+	autocmd FileType erlang let g:AutoComplPop_CompleteOption = '.,w,b,u,t,i,k~/.vim/dict/erlang.dict'
+	autocmd FileType objc let g:AutoComplPop_CompleteOption = '.,w,b,u,t,i,k~/.vim/dict/objc.dict'
+
+	autocmd Filetype erlang setlocal dict=~/.vim/dict/erlang.dict
+	autocmd Filetype javascript setlocal dict=~/.vim/dict/javascript.dict
+	autocmd Filetype html setlocal dict=~/.vim/dict/javascript.dict
+	autocmd Filetype java setlocal dict=~/.vim/dict/java.dict
+	autocmd Filetype objc setlocal dict=~/.vim/dict/objc.dict
+
+	" make the jump based on ctags with mod:fun
+	autocmd FileType erlang setlocal iskeyword+=:
+
+	au BufReadCmd *.jar,*.xpi call zip#Browse(expand("<amatch>"))
 endif
 
 " Quickly edit/reload the vimrc file
