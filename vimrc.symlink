@@ -232,7 +232,8 @@ if has("autocmd")
 	" make the jump based on ctags with mod:fun
 	autocmd FileType erlang setlocal iskeyword+=:
 
-	au BufReadCmd *.jar,*.xpi call zip#Browse(expand("<amatch>"))
+	autocmd BufReadCmd *.jar,*.xpi call zip#Browse(expand("<amatch>"))
+	"autocmd BufReadCmd,BufNewFile *.config set expandtab tabstop=4 sw=4 tw=80
 endif
 
 " Quickly edit/reload the vimrc file
@@ -248,6 +249,8 @@ nnoremap <F2> :tabnext <CR>
 nnoremap <F3> :set invpaste paste?<CR>
 set pastetoggle=<F3>
 set showmode
+
+nnoremap <F4> :set expandtab tabstop=4 sw=4 tw=80<CR>
 
 " If you need to use vim on a keyboard with an insanely positioned default ESC key.
 inoremap kj <ESC>
