@@ -23,7 +23,7 @@ then
 	# Java
 	export JAVA_HOME=`/usr/libexec/java_home`
 	launchctl setenv PATH $PATH
-	export PATH=$DOTFILES/bin/:/usr/local/git/bin:/opt/subversion/bin:$PATH:/sw/bin:/usr/local/mysql/bin:/usr/share/maven/bin:/opt/local/bin:~/bin:$PYTHONPATH
+	export PATH=$DOTFILES/bin:/usr/local/git/bin:/opt/subversion/bin:$PATH:/sw/bin:/usr/local/mysql/bin:/usr/share/maven/bin:/opt/local/bin:~/bin:$PYTHONPATH
 
 	# compiler settings
 	export LDFLAGS='-L/opt/local/lib'
