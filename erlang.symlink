@@ -1,0 +1,1 @@
+code:load_abs(filename:join(os:getenv("HOME"), "dotfiles/erlang/user_default")). 
