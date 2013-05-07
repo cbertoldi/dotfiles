@@ -272,6 +272,8 @@ function! Tab_Or_Complete()
 endfunction
 
 inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
+" remap increase number
+nnoremap <C-X> <C-a>
 
 " highlight current line
 nnoremap <Leader>c :set cursorline!<CR>
