@@ -1,6 +1,6 @@
 if [ "x$__GIT_PROMPT_DIR" == "x" ]
 then
-  __GIT_PROMPT_DIR=~/.bash
+  __GIT_PROMPT_DIR=$DOTFILES/bash/bash-git-prompt
 fi
 
 # Colors
@@ -23,6 +23,7 @@ IBlack="\[\033[0;90m\]"       # Black
 Magenta="\[\033[1;95m\]"     # Purple
 
 # Various variables you might want for your PS1 prompt instead
+User="$Green\u@$Red\h"
 Time12a="\@"
 PathShort="\w"
 
@@ -38,8 +39,8 @@ GIT_PROMPT_REMOTE=" "
 GIT_PROMPT_UNTRACKED="…"
 GIT_PROMPT_CLEAN="${BGreen}✔"
 
-PROMPT_START="$Yellow$PathShort$ResetColor"
-PROMPT_END=" \n$WHITE$Time12a$ResetColor $ "
+PROMPT_START="$User:$Yellow$PathShort$ResetColor"
+PROMPT_END="\n$WHITE$ResetColor$ "
 
 
 function update_current_git_vars() {
