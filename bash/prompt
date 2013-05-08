@@ -1,57 +1,16 @@
-# gist by github.com/ricardochimal
-# I'm not actually using this, but just in case I'll need something eventually ;)
+# Bash prompt customization
+# The original bash prompt without colours aliases, just in case
+# PS1="\[\e]0;\w\a\]\n\[\e[32m\]\u\[\e[m\]@\[\e[0;31m\]\h\[\e[m\]\[\e[33m\]:\w\[\e[0m\]\n\\$ "
+PS1="\n\[$Green\]\u\[$C_Off\]@\[$IWhite\]\h\[$C_Off\]\[$Yellow\](\!):\w\[$C_Off\]\n\\$ "
 
-function smart_pwd {
-    local pwdmaxlen=25
-    local trunc_symbol=".."
-    local dir=${PWD##*/}
-    local tmp=""
-    pwdmaxlen=$(( ( pwdmaxlen < ${#dir} ) ? ${#dir} : pwdmaxlen ))
-    NEW_PWD=${PWD/#$HOME/\~}
-    local pwdoffset=$(( ${#NEW_PWD} - pwdmaxlen ))
-    if [ ${pwdoffset} -gt "0" ]
-    then
-        tmp=${NEW_PWD:$pwdoffset:$pwdmaxlen}
-        tmp=${trunc_symbol}/${tmp#*/}
-        if [ "${#tmp}" -lt "${#NEW_PWD}" ]; then
-            NEW_PWD=$tmp
-        fi
-    fi
-}
+ROOT_PS1="\n\[$Red\]\u\[$IWhite\]@\[$Red\]\h\[$C_Off\]\[$Yellow\](\!):\w\[$C_Off\]\n\[$IWhite\]\\$ "
+USER_PS1="\n\[$Green\]\u\[$C_Off\]@\[$IWhite\]\h\[$C_Off\]\[$Yellow\](\!):\w\[$C_Off\]\n\[$IWhite\]\\$ "
 
-function boldtext {
-    echo "\\[\\033[1m\\]"$1"\\[\\033[0m\\]"
-}
+if (( $UID == 0 )); then
+	PS1=$ROOT_PS1
+else
+	PS1=$USER_PS1
+fi
 
-function bgcolor {
-    echo "\\[\\033[48;5;"$1"m\\]"
-}
-
-function fgcolor {
-    echo "\\[\\033[38;5;"$1"m\\]"
-}
-
-function resetcolor {
-    echo "\\[\\e[0m\\]"
-}
-
-function fancyprompt {
-    PROMPT_COMMAND="smart_pwd"
-    PS1="$(bgcolor 17)$(fgcolor 117)\u$(fgcolor 114)@$(fgcolor 117)\h$(fgcolor 190)$(boldtext :)$(bgcolor 232)$(fgcolor 86)\$NEW_PWD$(resetcolor)$(bgcolor 17)$(fgcolor 220)\$(__git_ps1 | tr -d ' ')$(resetcolor)$(fgcolor 208)\$ $(resetcolor)"
-}
-
-function dullprompt {
-    PROMPT_COMMAND=""
-    PS1="\u@\h:\w\$ "
-}
-case "$TERM" in
-xterm-color|xterm-256color|rxvt*|screen-256color)
-        fancyprompt
-    ;;
-*)
-        dullprompt
-    ;;
-esac
-
-
-
+export PS1="$PS1\[$C_Off\]"
+export SUDO_PS1=$ROOT_PS1
