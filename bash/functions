@@ -1,0 +1,19 @@
+# Create a new directory and enter it
+function mkd() {
+	mkdir -p "$@" && cd "$@"
+}
+
+# Print tty which we're currently connected to
+function which_tty() {
+	temp=$(tty); echo ${temp:5}
+}
+
+# list Makefile available targets 
+function targets() {
+	if [ "$#" -eq 0 ]; then
+		file=Makefile
+	else
+		file=$1
+	fi
+	cat $file | grep -e ':$' | cut -d : -f 1 -
+}

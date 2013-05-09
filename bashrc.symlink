@@ -18,6 +18,7 @@ fi
 . $DOTFILES/bash/rebar-completion.bash
 
 . $DOTFILES/bash/aliases
+. $DOTFILES/bash/functions
 . $DOTFILES/bash/colours
 # prompt must be sourced after colours definitions
 . $DOTFILES/bash/prompt
@@ -114,8 +115,3 @@ then
 
 	growl "Scemo chi legge"
 fi
-
-# Create a new directory and enter it
-function mkd() {
-	mkdir -p "$@" && cd "$@"
-}
