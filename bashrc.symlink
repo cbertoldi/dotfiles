@@ -1,8 +1,5 @@
 export DOTFILES=$HOME/dotfiles
 
-if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
-		. /etc/bash_completion
-fi
 # Things I can't share with the outer world ;)
 if [ -f ~/.localrc ]
 then
@@ -10,6 +7,13 @@ then
 fi
 
 # completion
+if [ "$(uname -s)" == "Darwin" ]; then
+	if [ -f /opt/local/etc/profile.d/bash_completion.sh ]; then
+		. /opt/local/etc/profile.d/bash_completion.sh
+	fi
+elif [ -f /etc/bash_completion ] && ! shopt -oq posix; then
+		. /etc/bash_completion
+fi
 . $DOTFILES/bash/git-completion.bash
 . $DOTFILES/bash/rebar-completion.bash
 
