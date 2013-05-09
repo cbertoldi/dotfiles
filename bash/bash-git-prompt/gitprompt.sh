@@ -42,7 +42,7 @@ GIT_PROMPT_CLEAN="${BGreen}✔"
 # PROMPT_START="$User:$Yellow$PathShort$ResetColor"
 PROMPT_END="\n$IWhite\\$\[$ResetColor\] "
 
-ROOT_PS1="\n\[$Red\]\u\[$IWhite\]@\[$Red\]\h(\!)\[$C_Off\]\[$Yellow\](\!):\w\[$C_Off\]"
+ROOT_PS1="\n\[$Red\]\u\[$IWhite\]@\[$Red\]\h(\!)\[$C_Off\]\[$Yellow\]:\w\[$C_Off\]"
 USER_PS1="\n\[$Green\]\u\[$C_Off\]@\[$IWhite\]\h(\!)\[$C_Off\]\[$Yellow\]:\w\[$C_Off\]"
 
 export SUDO_PS1=$ROOT_PS1
