@@ -1,10 +1,10 @@
 # Bash prompt customization
 # The original bash prompt without colours aliases, just in case
 # PS1="\[\e]0;\w\a\]\n\[\e[32m\]\u\[\e[m\]@\[\e[0;31m\]\h\[\e[m\]\[\e[33m\]:\w\[\e[0m\]\n\\$ "
-PS1="\n\[$Green\]\u\[$C_Off\]@\[$IWhite\]\h\[$C_Off\]\[$Yellow\](\!):\w\[$C_Off\]\n\\$ "
+PS1="\n\[$Green\]\u\[$C_Off\]@\[$IWhite\]\h(\!)\[$C_Off\]\[$Yellow\]:\w\[$C_Off\]\n\\$ "
 
-ROOT_PS1="\n\[$Red\]\u\[$IWhite\]@\[$Red\]\h\[$C_Off\]\[$Yellow\](\!):\w\[$C_Off\]\n\[$IWhite\]\\$ "
-USER_PS1="\n\[$Green\]\u\[$C_Off\]@\[$IWhite\]\h\[$C_Off\]\[$Yellow\](\!):\w\[$C_Off\]\n\[$IWhite\]\\$ "
+ROOT_PS1="\n\[$Red\]\u\[$IWhite\]@\[$Red\]\h(\!)\[$C_Off\]\[$Yellow\]:\w\[$C_Off\]\n\[$IWhite\]\\$ "
+USER_PS1="\n\[$Green\]\u\[$C_Off\]@\[$IWhite\]\h(\!)\[$C_Off\]\[$Yellow\]:\w\[$C_Off\]\n\[$IWhite\]\\$ "
 
 if (( $UID == 0 )); then
 	PS1=$ROOT_PS1
