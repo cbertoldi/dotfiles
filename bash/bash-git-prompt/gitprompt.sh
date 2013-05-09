@@ -1,7 +1,6 @@
 if [ "x$__GIT_PROMPT_DIR" == "x" ]
 then
-  # __GIT_PROMPT_DIR=$DOTFILES/bash/bash-git-prompt
-  __GIT_PROMPT_DIR=~/bash-git-prompt
+  __GIT_PROMPT_DIR=$DOTFILES/bash/bash-git-prompt
 fi
 
 # Colors
