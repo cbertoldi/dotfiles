@@ -22,6 +22,7 @@ fi
 . $DOTFILES/bash/colours
 # prompt must be sourced after colours definitions
 . $DOTFILES/bash/prompt
+. $DOTFILES/bash/bash-git-prompt/gitprompt.sh
 
 # mac 
 if [ "$(uname -s)" == "Darwin" ]
