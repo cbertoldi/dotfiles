@@ -1,6 +1,7 @@
 if [ "x$__GIT_PROMPT_DIR" == "x" ]
 then
-  __GIT_PROMPT_DIR=$DOTFILES/bash/bash-git-prompt
+  # __GIT_PROMPT_DIR=$DOTFILES/bash/bash-git-prompt
+  __GIT_PROMPT_DIR=~/bash-git-prompt
 fi
 
 # Colors
@@ -23,7 +24,7 @@ IBlack="\[\033[0;90m\]"       # Black
 Magenta="\[\033[1;95m\]"     # Purple
 
 # Various variables you might want for your PS1 prompt instead
-User="$Green\u@$Red\h"
+User="$Green\u@$IWhite\h"
 Time12a="\@"
 PathShort="\w"
 
@@ -39,9 +40,20 @@ GIT_PROMPT_REMOTE=" "
 GIT_PROMPT_UNTRACKED="…"
 GIT_PROMPT_CLEAN="${BGreen}✔"
 
-PROMPT_START="$User:$Yellow$PathShort$ResetColor"
-PROMPT_END="\n$WHITE$ResetColor$ "
+# PROMPT_START="$User:$Yellow$PathShort$ResetColor"
+PROMPT_END="\n$IWhite\\$\[$ResetColor\] "
 
+ROOT_PS1="\n\[$Red\]\u\[$IWhite\]@\[$Red\]\h(\!)\[$C_Off\]\[$Yellow\](\!):\w\[$C_Off\]"
+USER_PS1="\n\[$Green\]\u\[$C_Off\]@\[$IWhite\]\h(\!)\[$C_Off\]\[$Yellow\]:\w\[$C_Off\]"
+
+export SUDO_PS1=$ROOT_PS1
+function am_i_root() {
+	if (( $UID == 0 )); then
+		export PROMPT_START=$ROOT_PS1
+	else
+		export PROMPT_START=$USER_PS1
+	fi
+}
 
 function update_current_git_vars() {
     unset __CURRENT_GIT_STATUS
@@ -64,6 +76,7 @@ function update_current_git_vars() {
 function setGitPrompt() {
 	update_current_git_vars
 	set_virtualenv
+	am_i_root
 
 	if [ -n "$__CURRENT_GIT_STATUS" ]; then
 	  STATUS=" $GIT_PROMPT_PREFIX$GIT_PROMPT_BRANCH$GIT_BRANCH$ResetColor"
@@ -106,4 +119,4 @@ function set_virtualenv () {
   fi
 }
 
-PROMPT_COMMAND=setGitPrompt
+export PROMPT_COMMAND=setGitPrompt
