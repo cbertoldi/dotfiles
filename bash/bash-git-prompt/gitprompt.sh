@@ -5,25 +5,25 @@ fi
 
 # Colors
 # Reset
-ResetColor="\[\033[0m\]"       # Text Reset
+# ResetColor="\[\033[0m\]"       # Text Reset
 
 # Regular Colors
-Red="\[\033[0;31m\]"          # Red
-Yellow="\[\033[0;33m\]"       # Yellow
-Blue="\[\033[0;34m\]"         # Blue
-WHITE='\[\033[37m\]'
+# Red="\[\033[0;31m\]"          # Red
+# Yellow="\[\033[0;33m\]"       # Yellow
+# Blue="\[\033[0;34m\]"         # Blue
+# WHITE='\[\033[37m\]'
 
 # Bold
-BGreen="\[\033[1;32m\]"       # Green
-
+# BGreen="\[\033[1;32m\]"       # Green
+ 
 # High Intensty
-IBlack="\[\033[0;90m\]"       # Black
+# IBlack="\[\033[0;90m\]"       # Black
 
 # Bold High Intensty
-Magenta="\[\033[1;95m\]"     # Purple
+# Magenta="\[\033[1;95m\]"     # Purple
 
 # Various variables you might want for your PS1 prompt instead
-User="$Green\u@$IWhite\h"
+# User="$Green\u@$IWhite\h"
 Time12a="\@"
 PathShort="\w"
 
@@ -31,7 +31,7 @@ PathShort="\w"
 GIT_PROMPT_PREFIX="["
 GIT_PROMPT_SUFFIX="]"
 GIT_PROMPT_SEPARATOR="|"
-GIT_PROMPT_BRANCH="${Magenta}"
+GIT_PROMPT_BRANCH="${IPurple}"
 GIT_PROMPT_STAGED="${Red}● "
 GIT_PROMPT_CONFLICTS="${Red}✖ "
 GIT_PROMPT_CHANGED="${Blue}✚ "
@@ -40,7 +40,7 @@ GIT_PROMPT_UNTRACKED="…"
 GIT_PROMPT_CLEAN="${BGreen}✔"
 
 # PROMPT_START="$User:$Yellow$PathShort$ResetColor"
-PROMPT_END="\n$IWhite\\$\[$ResetColor\] "
+PROMPT_END="\n\[$IWhite\]\\$\[$C_Off\] "
 
 ROOT_PS1="\n\[$Red\]\u\[$IWhite\]@\[$Red\]\h\[$IWhite\](\!)\[$C_Off\]\[$Yellow\]:\w\[$C_Off\]"
 USER_PS1="\n\[$Green\]\u\[$C_Off\]@\[$IWhite\]\h(\!)\[$C_Off\]\[$Yellow\]:\w\[$C_Off\]"
