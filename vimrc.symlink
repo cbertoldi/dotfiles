@@ -12,8 +12,15 @@ syntax enable
 set wildignore=*.swp,*.bak,*.pyc,*.class
 set incsearch
 set scrolloff=1
-set backupdir=$TMP/
-set directory=$TMP/
+
+" Try to save backup and swap files in private directory, fallback to $TMP
+" otherwhise.
+let BACKUP_DIR = '~/.vim-tmp'
+silent execute '!mkdir -p ' . BACKUP_DIR
+execute "set backupdir=" . BACKUP_DIR . ",/$TMP/"
+execute "set directory=" . BACKUP_DIR . ",/$TMP/"
+set backup
+
 set number
 
 call pathogen#infect()
