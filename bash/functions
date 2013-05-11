@@ -17,3 +17,13 @@ function targets() {
 	fi
 	cat $file | grep -e ':$' | cut -d : -f 1 -
 }
+
+# Function like zsh, to edit env variables on the fly.
+# Credit: http://superuser.com/users/22317/daniel-beck
+function vared {
+  [[ $# -eq 1 ]] || { echo "Usage: vared VARNAME" >&2 ; return 1 ; }
+  tmpfile=$( command mktemp -t vared.XXXX )
+  echo "${!1}" > "$tmpfile"
+  vi "$tmpfile" && export $1="$(< "$tmpfile" )"
+  command rm "$tmpfile"
+}
