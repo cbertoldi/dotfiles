@@ -16,6 +16,7 @@ alias jad="jad -s java"
 alias ..="cd .."
 alias j="jobs"
 alias gdb="gdb -q"
+alias ssh="TERM=xterm-256color ssh"
 
 if [ "$(uname -s)" == "Darwin" ]
 then
