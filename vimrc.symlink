@@ -240,8 +240,7 @@ if has("autocmd")
 	autocmd FileType erlang setlocal iskeyword+=:
 
 	autocmd BufReadCmd *.jar,*.xpi call zip#Browse(expand("<amatch>"))
-	autocmd BufReadCmd,BufNewFile rebar.config set expandtab tabstop=4 sw=4 tw=80
-	autocmd BufReadCmd,BufNewFile sys.config set expandtab tabstop=4 sw=4 tw=80
+	autocmd BufReadPre,BufNewFile rebar.config,sys.config set filetype=erlang
 endif
 
 " Disable syntastic for erlang files, it signals errors that actually aren't.
