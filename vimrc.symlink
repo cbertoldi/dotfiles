@@ -240,8 +240,14 @@ if has("autocmd")
 	autocmd FileType erlang setlocal iskeyword+=:
 
 	autocmd BufReadCmd *.jar,*.xpi call zip#Browse(expand("<amatch>"))
-	"autocmd BufReadCmd,BufNewFile *.config set expandtab tabstop=4 sw=4 tw=80
+	autocmd BufReadCmd,BufNewFile rebar.config set expandtab tabstop=4 sw=4 tw=80
+	autocmd BufReadCmd,BufNewFile sys.config set expandtab tabstop=4 sw=4 tw=80
 endif
+
+" Disable syntastic for erlang files, it signals errors that actually aren't.
+let g:syntastic_mode_map={ 'mode': 'active',
+					\ 'active_filetypes': [],
+					\ 'passive_filetypes': ['erlang'] }
 
 " Quickly edit/reload the vimrc file
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
