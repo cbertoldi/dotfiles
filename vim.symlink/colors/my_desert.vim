@@ -53,7 +53,7 @@ hi Type            cterm=NONE term=underline cterm=bold ctermfg=143 gui=bold gui
 hi Underlined      cterm=NONE term=underline cterm=underline ctermfg=111 gui=underline guifg=#80a0ff
 hi Ignore          cterm=NONE ctermfg=250 guifg=#bcbcbc
 hi Error           cterm=NONE term=reverse ctermfg=231 ctermbg=196 guifg=White guibg=Red
-hi Todo            cterm=NONE term=standout ctermfg=202 ctermbg=226 guifg=orangered guibg=yellow2
+hi Todo            cterm=NONE term=standout cterm=bold ctermfg=226 ctermbg=236 gui=bold guifg=yellow guibg=grey20
 hi String          cterm=NONE term=underline ctermfg=217 guifg=#ffafaf
 " hi String          links to Constant
 " hi Character       links to Constant
