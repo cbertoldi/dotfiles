@@ -16,6 +16,7 @@
 	unstage = reset HEAD --
 	last = log -1 HEAD
 	vimdiff = "!GIT_PAGER=" GIT_EXTERNAL_DIFF="git_diff_wrapper git diff" 
+    rmb = "!f(){ git branch -d ${1} && git push origin --delete ${1}; };f"
 [help]
 	autocorrect = 1
 [difftool]
