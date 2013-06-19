@@ -1,6 +1,6 @@
 # set-window-option --> setw
 # copy and paste on Mac OS X
-set-option -g default-command "/opt/local/bin/reattach-to-user-namespace -l bash"
+set-option -g default-command "/opt/local/bin/reattach-to-user-namespace -l bash 2> /dev/null || bash"
 
 set -g xterm-keys on
 # to add italics (see tmux FAQ)
