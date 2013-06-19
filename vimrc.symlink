@@ -211,6 +211,7 @@ if has("autocmd")
 	autocmd FileType c,cpp set cindent
 	autocmd FileType objc set tw=120
 	autocmd FileType markdown set expandtab tabstop=4 sw=4 tw=80
+	autocmd FileType yaml set expandtab tabstop=2 sw=2
 
 	autocmd FileType sh call PoundComment()
 	autocmd FileType html call HTMLComment()
