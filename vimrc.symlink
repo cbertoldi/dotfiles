@@ -9,7 +9,11 @@ set shiftwidth=4
 set hlsearch
 set mouse=a
 syntax enable
+
 set wildignore=*.swp,*.bak,*.pyc,*.class
+set wildmode=longest,list,full
+set wildmenu
+
 set incsearch
 set scrolloff=1
 
@@ -45,7 +49,7 @@ if has("win32")
 "     endif
 "   endif
 elseif has("mac")
-	set clipboard=unnamed
+	set clipboard+=unnamed
 	set guifont=Menlo\ Regular:h11
 	let g:main_font = "Menlo\\ Regular:h11"
 	let g:small_font = "Menlo\\ Regular:h2"
