@@ -73,7 +73,6 @@ setlocal omnifunc=syntaxcomplete#Complete
 " autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 " autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 
-" file di configurazione per python
 source ~/.vim/vimrc-python
 
 let g:AutoComplPop_IgnoreCaseOption = 1
@@ -207,7 +206,7 @@ if has("autocmd")
 	autocmd FileType html,htm set tabstop=2 formatoptions+=tl sw=2 tw=0
 	autocmd FileType erlang set tabstop=4 sw=4 tw=80 expandtab formatoptions-=ro
 	" no trailing spaces 
-	autocmd FileType c,cpp,java,php,erlang autocmd BufWritePre <buffer> :%s/\s\+$//e
+	autocmd FileType c,cpp,java,php,erlang,python autocmd BufWritePre <buffer> :%s/\s\+$//e
 	"autocmd FileType *.py set smarttab expandtab softtabstop=4  
 	"autocmd BufWritePre *.py normal m`:%s/\s\+$//e ``
 	autocmd FileType xml,xsl set tw=0
