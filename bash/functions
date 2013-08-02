@@ -27,3 +27,45 @@ function vared {
   vi "$tmpfile" && export $1="$(< "$tmpfile" )"
   command rm "$tmpfile"
 }
+
+#
+# Fetch a merge request
+#
+
+merge-request-fetch ()
+{
+    _merge_request="$1"
+
+    _repository=$(basename $(pwd -P))
+
+    git branch -D merge-requests/${_merge_request}
+
+    # Check out a new branch for integration
+    git checkout -b merge-requests/${_merge_request}
+
+    # Fetch the merge request into this branch
+    git pull git://gitorious.td.ubiquity.it/umg/${_repository}.git refs/merge-requests/${_merge_request}
+
+    # Show the commits, assess they are okay
+    git log --pretty=oneline --abbrev-commit master..merge-requests/${_merge_request}
+}
+alias mrf="merge-request-fetch"
+
+#
+# Apply a merge request
+#
+
+merge-request-apply ()
+{
+    _merge_request="$1"
+
+    git checkout master
+    # close-ticket
+
+    git merge merge-requests/${_merge_request}
+
+    git branch -d merge-requests/${_merge_request}
+
+    # git push upstream master:master
+}
+alias mra="merge-request-apply"
