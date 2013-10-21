@@ -22,3 +22,6 @@
 [submodule "vim.symlink/bundle/vim-fugitive"]
 	path = vim.symlink/bundle/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
+[submodule "vim.symlink/bundle/ctrlp"]
+	path = vim.symlink/bundle/ctrlp
+	url = https://github.com/kien/ctrlp.vim
