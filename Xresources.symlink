@@ -1,0 +1,172 @@
+! xscreensaver ---------------------------------------------------------------
+
+!font settings
+xscreensaver.Dialog.headingFont:        -*-dina-bold-r-*-*-10-*-*-*-*-*-*-*
+xscreensaver.Dialog.bodyFont:           -*-dina-medium-r-*-*-10-*-*-*-*-*-*-*
+xscreensaver.Dialog.labelFont:          -*-dina-medium-r-*-*-10-*-*-*-*-*-*-*
+xscreensaver.Dialog.unameFont:          -*-dina-medium-r-*-*-10-*-*-*-*-*-*-*
+xscreensaver.Dialog.buttonFont:         -*-dina-bold-r-*-*-10-*-*-*-*-*-*-*
+xscreensaver.Dialog.dateFont:           -*-dina-medium-r-*-*-10-*-*-*-*-*-*-*
+xscreensaver.passwd.passwdFont:         -*-dina-bold-r-*-*-10-*-*-*-*-*-*-*
+!general dialog box (affects main hostname, username, password text)
+xscreensaver.Dialog.foreground:         #EDEDED
+xscreensaver.Dialog.background:         #202020
+xscreensaver.Dialog.topShadowColor:     #202024
+xscreensaver.Dialog.bottomShadowColor:  #202024
+xscreensaver.Dialog.Button.foreground:  #EDEDFF
+xscreensaver.Dialog.Button.background:  #444
+!username/password input box and date text colour
+xscreensaver.Dialog.text.foreground:    #EDEDFF
+xscreensaver.Dialog.text.background:    #444
+xscreensaver.Dialog.internalBorderWidth:24
+xscreensaver.Dialog.borderWidth:        20
+xscreensaver.Dialog.shadowThickness:    2
+!timeout bar (background is actually determined by Dialog.text.background)
+xscreensaver.passwd.thermometer.foreground:  #A9B7C4
+xscreensaver.passwd.thermometer.background:  #202020
+xscreensaver.passwd.thermometer.width:       8
+!datestamp format--see the strftime(3) manual page for details
+xscreensaver.dateFormat:    %I:%M%P %a %b %d, %Y
+
+! Xft settings 
+Xft.dpi:        96
+Xft.antialias:  true
+Xft.rgba:       rgb
+Xft.hinting:    true
+Xft.hintstyle:  hintslight
+Xft.lcdfilter: 	lcddefault
+
+URxvt*loginShell: true
+URxvt*geometry: 100x50
+URxvt*saveLines: 10000
+URxvt*cutchars: "`\"'&()*,:;<=>?[\\]^{|}$"
+
+! First the normal color, then the bold one
+! BLK
+#define _color0        #000000
+#define _color8        #545454
+
+! RED
+! TomorrowNightEighties.t_red
+#define _color1        #DB0404
+#define _color9        #fc5454
+
+! GRN
+! TomorrowNightEighties.t_green
+#define _color2        #54FC54
+#define _color10       #63F163
+
+! YEL
+! TomorrowNight.t_orange
+#define _color3        #FFD75F
+! TomorrowNight.t_yellow
+#define _color11       #FFCD36
+
+! BLU
+! TomorrowNight.t_blue
+#define _color4        #4660FF
+#define _color12       #7081FF
+
+! MAG
+! TomorrowNightEighties.t_purple
+#define _color5        #F67EF5
+#define _color13       #FD86FC
+
+! CYN
+! TomorrowNightEighties.t_aqua(hue,value) + TomorrowNight.t_aqua(saturation)
+#define _color6        #81CCCC
+#define _color14       #6DE7E6 
+
+! WHT
+! TomorrowNightEighties.t_selection
+#define _color7        #DDDDDD
+! TomorrowNightEighties.t_current_line
+#define _color15       #FFFFFF
+
+! FMT
+#define _colorBD       #FCFCFC
+#define _colorUL       #FFFFFF
+
+! TXT
+! TomorrowNightEighties.t_foreground
+#define _foreground    #C8C8C8
+! TomorrowNightEighties.t_background
+#define _background    #303030
+#define _cursorColor   #DDDDDD
+! indian red
+! #define _cursorColor   #CD5C5C
+
+URxvt*color0         : _color0
+URxvt*color1         : _color1
+URxvt*color2         : _color2
+URxvt*color3         : _color3
+URxvt*color4         : _color4
+URxvt*color5         : _color5
+URxvt*color6         : _color6
+URxvt*color7         : _color7
+URxvt*color8         : _color8
+URxvt*color9         : _color9
+URxvt*color10        : _color10
+URxvt*color11        : _color11
+URxvt*color12        : _color12
+URxvt*color13        : _color13
+URxvt*color14        : _color14
+URxvt*color15        : _color15
+URxvt*colorBD        : _colorBD
+URxvt*colorIT        : _colorIT
+URxvt*colorUL        : _colorUL
+URxvt*foreground     : _foreground
+URxvt*background     : _background
+URxvt*cursorColor    : _cursorColor
+
+XTerm*color0         : _color0
+XTerm*color1         : _color1
+XTerm*color2         : _color2
+XTerm*color3         : _color3
+XTerm*color4         : _color4
+XTerm*color5         : _color5
+XTerm*color6         : _color6
+XTerm*color7         : _color7
+XTerm*color8         : _color8
+XTerm*color9         : _color9
+XTerm*color10        : _color10
+XTerm*color11        : _color11
+XTerm*color12        : _color12
+XTerm*color13        : _color13
+XTerm*color14        : _color14
+XTerm*color15        : _color15
+XTerm*colorBD        : _colorBD
+XTerm*colorIT        : _colorIT
+XTerm*colorUL        : _colorUL
+XTerm*foreground     : _foreground
+XTerm*background     : _background
+XTerm*cursorColor    : _cursorColor
+
+
+URxvt*font: xft:inconsolata:size=10.5, xft:dejavu sans mono:size=9
+URxvt*boldfont: xft:inconsolata:size=10.5, xft:dejavu sans mono:size=9
+URxvt*italicfont: xft:inconsolata:size=10.5, xft:dejavu sans mono:size=9
+URxvt*bolditalicfont: xft:inconsolata:size=10.5, xft:dejavu sans mono:size=9
+!URxvt*font: xft:droid sans mono:size=9
+!URxvt*font: xft:dejavu sans mono:size=9
+!URxvt*italicFont: DejaVu Sans Mono Book 9
+URxvt*scrollBar: false
+URxvt*scrollTtyKeypress: true
+URxvt*urgentOnBell: true
+
+URxvt*visualBell: true
+URxvt*letterSpace: -1
+// this is SO AWESOME:
+URxvt*fading: 15
+
+URxvt*perl-ext-common : default,matcher
+URxvt*urlLauncher     : firefox
+URxvt*matcher.button  : 1
+
+URxvt.iso14755 : false
+
+URxvt.keysym.C-C: perl:clipboard:copy
+URxvt.keysym.C-V: perl:clipboard:paste
+!URxvt*iconFile : /usr/share/icons/elementary-xfce/HighContrast/scalable/apps/utilities-terminal.svg
+
+// URxvt spells "eightBitInput" as "meta8" and defaults it to false
