@@ -3,10 +3,12 @@ set nocompatible
 set langmenu=none
 set tw=78
 let $LANG = 'en'
-"set guifont=Monospace\ 8.5 
 set tabstop=4
 set shiftwidth=4
+set incsearch
 set hlsearch
+set ignorecase
+set smartcase
 set mouse=a
 syntax enable
 
@@ -14,8 +16,33 @@ set wildignore=*.swp,*.bak,*.pyc,*.class
 set wildmode=longest,list,full
 set wildmenu
 
-set incsearch
 set scrolloff=1
+set guioptions=egLt
+" Remove menu, toolbar and scrollbar mrT
+
+" On Windows, also use '.vim' instead of 'vimfiles'; this makes synchronization
+" across (heterogeneous) systems easier.
+if has('win32') || has('win64')
+	" I have to add this because on this machine $HOME is a network folder
+	let $HOME = $USERPROFILE
+    set runtimepath=$HOME/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after
+	" Yes, it says that Windows is totally bullshit! :[
+	
+ 	set guifont=Consolas:h10:cDEFAULT
+	set bs=2
+	set clipboard=unnamed
+	map <C-c> y
+	map <C-v> p
+elseif has("mac")
+	set clipboard+=unnamed
+	set guifont=Menlo\ Regular:h11
+	" Maybe I should correct the followings
+	let g:main_font = "Menlo\\ Regular:h11"
+	let g:small_font = "Menlo\\ Regular:h2"
+else 
+	let g:main_font = "Monospace\\ 8.5"
+	let g:small_font = "Monospace\\ 2"
+endif
 
 " Try to save backup and swap files in private directory, fallback to $TMP
 " otherwhise.
@@ -38,25 +65,6 @@ endif
 
 " Stop asking to realod file when changed, just do it
 set autoread
-
-if has("win32")
- 	set guifont=Lucida_Console:h8:cDEFAULT
-" else
-"   if has("unix")
-"     let s:uname = system("uname")
-"     if s:uname == "Darwin\n"
-"       "Mac options here
-"     endif
-"   endif
-elseif has("mac")
-	set clipboard+=unnamed
-	set guifont=Menlo\ Regular:h11
-	let g:main_font = "Menlo\\ Regular:h11"
-	let g:small_font = "Menlo\\ Regular:h2"
-else 
-	let g:main_font = "Monospace\\ 8.5"
-	let g:small_font = "Monospace\\ 2"
-endif
 
 " no beeping
 set vb
@@ -110,20 +118,20 @@ if version >= 700 && &term != 'cygwin' && !has('gui_running')
     endif
   endif
 endif
-if exists('s:use_CSApprox')
-  " Can use the CSApprox.vim plugin.
-  let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
+"if exists('s:use_CSApprox')
+"  " Can use the CSApprox.vim plugin.
+"  let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
+"  colorscheme my_desert
+"elseif exists('s:use_guicolorscheme')
+"  " Can use the guicolorscheme plugin. It needs to be loaded before
+"  " running GuiColorScheme (hence the :runtime! command).
+"  runtime! plugin/guicolorscheme.vim
+"  GuiColorScheme my_desert
+"else
   colorscheme my_desert
-elseif exists('s:use_guicolorscheme')
-  " Can use the guicolorscheme plugin. It needs to be loaded before
-  " running GuiColorScheme (hence the :runtime! command).
-  runtime! plugin/guicolorscheme.vim
-  GuiColorScheme my_desert
-else
-  colorscheme my_desert
-endif
+"endif
 
-set statusline=%F%m%r%h%w\ [FMT=%{&ff}]\[TYPE=%Y]\ [ASCII=\%03.3b]\[HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
+set statusline=%F%m%r%h%w\ [FMT=%{&ff}]\[TYPE=%Y]\ [ASCII=\%03.3b]\[HEX=\%02.2B]\ [POS=%04l/%L,%04v][%p%%]
 "hi StatusLine     term=bold,reverse cterm=bold ctermfg=yellow ctermbg=DarkGray gui=bold guifg=#6C6C6C guibg=#FCE94F
 "hi StatusLineNC   term=reverse cterm=reverse ctermfg=yellow ctermbg=black gui=reverse guifg=#6C6C6C guibg=#FCE94F
 hi Visual gui=none guifg=#000000 guibg=#c4c4c4
@@ -242,6 +250,7 @@ if has("autocmd")
 
 	" make the jump based on ctags with mod:fun
 	autocmd FileType erlang setlocal iskeyword+=:
+	autocmd FileType *.impex set filetype=csv
 
 	autocmd BufReadCmd *.jar,*.xpi call zip#Browse(expand("<amatch>"))
 	autocmd BufReadPre,BufNewFile rebar.config,sys.config set filetype=erlang
@@ -262,7 +271,8 @@ nmap <silent> ./ :nohlsearch<CR>
 nnoremap <F1> :tabprev <CR>
 nnoremap <F2> :tabnext <CR>
 
-nnoremap <F3> :set invpaste paste?<CR>
+" nnoremap <F3> :set invpaste paste?<CR>
+" set pastetoggle=<Leader>p
 set pastetoggle=<F3>
 set showmode
 
@@ -271,14 +281,14 @@ nnoremap <F4> :set expandtab tabstop=4 sw=4 tw=80<CR>
 " If you need to use vim on a keyboard with an insanely positioned default ESC key.
 inoremap kj <ESC>
 
-"Use TAB to complete when typing words, else inserts TABs as usual.
-"Uses dictionary and source files to find matching words to complete.
+" Use TAB to complete when typing words, else inserts TABs as usual.
+" Uses dictionary and source files to find matching words to complete.
 
-"See help completion for source,
-"Note: usual completion is on <C-n> but more trouble to press all the time.
-"Never type the same word twice and maybe learn a new spellings!
-"Use the Linux dictionary when spelling is in doubt.
-"Window users can copy the file to their machine.
+" See help completion for source,
+" Note: usual completion is on <C-n> but more trouble to press all the time.
+" Never type the same word twice and maybe learn a new spellings!
+" Use the Linux dictionary when spelling is in doubt.
+" Window users can copy the file to their machine.
 function! Tab_Or_Complete()
   if col('.')>1 && strpart( getline('.'), col('.')-2, 3 ) =~ '^\w'
     return "\<C-N>"
@@ -294,6 +304,9 @@ nnoremap <C-i> <C-a>
 " highlight current line
 nnoremap <Leader>c :set cursorline!<CR>
 map Q :qa<CR>
+
+" switch to last opened buffer
+nmap <C-e> :e#<CR>
 
 if &diff
 	map <C-R> :diffupdate<CR>
