@@ -1,6 +1,3 @@
-[submodule "vim.symlink/bundle/command-t"]
-	path = vim.symlink/bundle/command-t
-	url = https://github.com/wincent/Command-T.git
 [submodule "vim.symlink/bundle/syntastic"]
 	path = vim.symlink/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
