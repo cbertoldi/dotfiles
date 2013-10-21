@@ -41,6 +41,10 @@ URxvt*geometry: 100x50
 URxvt*saveLines: 10000
 URxvt*cutchars: "`\"'&()*,:;<=>?[\\]^{|}$"
 
+xterm*geometry: 100x50
+xterm*saveLines: 2000
+xterm*charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
+
 ! First the normal color, then the bold one
 ! BLK
 #define _color0        #000000
@@ -142,11 +146,14 @@ XTerm*foreground     : _foreground
 XTerm*background     : _background
 XTerm*cursorColor    : _cursorColor
 
-
+! fonts
 URxvt*font: xft:inconsolata:size=10.5, xft:dejavu sans mono:size=9
 URxvt*boldfont: xft:inconsolata:size=10.5, xft:dejavu sans mono:size=9
 URxvt*italicfont: xft:inconsolata:size=10.5, xft:dejavu sans mono:size=9
 URxvt*bolditalicfont: xft:inconsolata:size=10.5, xft:dejavu sans mono:size=9
+
+XTerm*faceName: inconsolata, dejavu sans mono
+XTerm*faceSize: 11
 !URxvt*font: xft:droid sans mono:size=9
 !URxvt*font: xft:dejavu sans mono:size=9
 !URxvt*italicFont: DejaVu Sans Mono Book 9
@@ -156,7 +163,6 @@ URxvt*urgentOnBell: true
 
 URxvt*visualBell: true
 URxvt*letterSpace: -1
-// this is SO AWESOME:
 URxvt*fading: 15
 
 URxvt*perl-ext-common : default,matcher
