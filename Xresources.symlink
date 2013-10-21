@@ -90,6 +90,7 @@ xterm*charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
 ! FMT
 #define _colorBD       #FCFCFC
 #define _colorUL       #FFFFFF
+#define _colorIT       #FFFFFF
 
 ! TXT
 ! TomorrowNightEighties.t_foreground
