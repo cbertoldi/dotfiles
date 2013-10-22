@@ -20,6 +20,7 @@ fi
 . $DOTFILES/bash/aliases
 . $DOTFILES/bash/functions
 . $DOTFILES/bash/colours
+. $DOTFILES/bash/svn-colours
 # prompt must be sourced after colours definitions
 . $DOTFILES/bash/prompt
 . $DOTFILES/bash/bash-git-prompt/gitprompt.sh
