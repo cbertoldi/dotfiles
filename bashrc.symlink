@@ -108,14 +108,17 @@ export LANG="en_US"
 export LANGUAGE="en_US"
 export LC_ALL="en_US.UTF-8"
 
-#export TERM=xterm-256color
-if [ -e /usr/share/terminfo/x/xterm-256color ]; then
-	export TERM='xterm-256color'
-elif [[ $(toe | grep -m 1 256) ]]
+if [ "$(uname -s)" == "Darwin" ]
 then
-	export TERM='screen-it-256color'
-else
-	export TERM='xterm-color'
+	export TERM=xterm-256color
+	if [ -e /usr/share/terminfo/x/xterm-256color ]; then
+		export TERM='xterm-256color'
+	elif [[ $(toe | grep -m 1 256) ]]
+	then
+		export TERM='screen-it-256color'
+	else
+		export TERM='xterm-color'
+	fi
 fi
 
 if [ "$(uname -s)" == "Darwin" ]
