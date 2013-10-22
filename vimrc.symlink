@@ -69,8 +69,8 @@ set autoread
 " no beeping
 set vb
 
-" I wanna read the errors
-set debug=msg
+" If I wanna read the errors
+" set debug=msg
 
 let filetype_m="objc"
 
