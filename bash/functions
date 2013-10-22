@@ -32,8 +32,7 @@ function vared {
 # Fetch a merge request
 #
 
-merge-request-fetch ()
-{
+merge-request-fetch () {
     _merge_request="$1"
 
     _repository=$(basename $(pwd -P))
@@ -55,8 +54,7 @@ alias mrf="merge-request-fetch"
 # Apply a merge request
 #
 
-merge-request-apply ()
-{
+merge-request-apply () {
     _merge_request="$1"
 
     git checkout master
