@@ -30,7 +30,7 @@ xscreensaver.dateFormat:    %I:%M%P %a %b %d, %Y
 
 ! Xft settings 
 Xft.dpi:        96
-Xft.antialias:  true
+Xft.antialias:  false
 Xft.rgba:       rgb
 Xft.hinting:    true
 Xft.hintstyle:  hintslight
@@ -43,8 +43,10 @@ URxvt*cutchars: "`\"'&()*,:;<=>?[\\]^{|}$"
 
 xterm*termName: xterm-256color
 xterm*VT100.geometry: 100x50
-xterm*saveLines: 2000
+xterm*saveLines: 10000
 xterm*charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
+xterm*visualBell: true
+xterm*bellIsUrgent: true
 !33:48,36-38:48,43-47:48,58:48,61:48,63-64:48,126:48
 
 ! First the normal color, then the bold one
@@ -55,7 +57,7 @@ xterm*charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
 ! RED
 ! TomorrowNightEighties.t_red
 #define _color1        #DB0404
-#define _color9        #fc5454
+#define _color9        #FC5454
 
 ! GRN
 ! TomorrowNightEighties.t_green
@@ -90,7 +92,7 @@ xterm*charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
 #define _color15       #FFFFFF
 
 ! FMT
-#define _colorBD       #FCFCFC
+#define _colorBD       #FFFFFF
 #define _colorUL       #FFFFFF
 #define _colorIT       #FFFFFF
 
@@ -155,8 +157,10 @@ URxvt*boldfont: xft:inconsolata:size=10.5, xft:dejavu sans mono:size=9
 URxvt*italicfont: xft:inconsolata:size=10.5, xft:dejavu sans mono:size=9
 URxvt*bolditalicfont: xft:inconsolata:size=10.5, xft:dejavu sans mono:size=9
 
-XTerm*faceName: inconsolata, dejavu sans mono
-XTerm*faceSize: 11
+!XTerm*faceName: inconsolata, dejavu sans mono
+xterm*faceName: Inconsolata:size=11:antialias=false
+xterm*colorULMode: true
+!XTerm*faceSize: 11
 !URxvt*font: xft:droid sans mono:size=9
 !URxvt*font: xft:dejavu sans mono:size=9
 !URxvt*italicFont: DejaVu Sans Mono Book 9
