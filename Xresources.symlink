@@ -41,7 +41,8 @@ URxvt*geometry: 100x50
 URxvt*saveLines: 10000
 URxvt*cutchars: "`\"'&()*,:;<=>?[\\]^{|}$"
 
-xterm*geometry: 100x50
+xterm*termName: xterm-256color
+xterm*VT100.geometry: 100x50
 xterm*saveLines: 2000
 xterm*charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
 !33:48,36-38:48,43-47:48,58:48,61:48,63-64:48,126:48
