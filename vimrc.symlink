@@ -33,6 +33,8 @@ if has('win32') || has('win64')
 	set clipboard=unnamed
 	map <C-c> y
 	map <C-v> p
+	let g:outlook_use_tabs = 1
+	let g:outlook_servername = 'OUTLOOK'
 elseif has("mac")
 	set clipboard+=unnamed
 	set guifont=Menlo\ Regular:h11
@@ -145,6 +147,11 @@ hi Visual gui=none guifg=#000000 guibg=#c4c4c4
 " hi DiffChange ctermbg=242 ctermfg=white
 " hi DiffText ctermbg=242 ctermfg=222
 
+" Custom colors for the csv plugin
+hi CSVColumnEven term=bold ctermbg=238 guibg=grey30
+"hi CSVColumnOdd  term=bold ctermbg=244 guibg=#b2b2b2
+hi CSVColumnOdd  term=bold cterm=bold  ctermfg=242 ctermbg=221 gui=bold guifg=#6c6c6c guibg=#ffd75f
+
 let Tlist_Ctags_Cmd='/opt/local/bin/ctags'
 
 " set diffexpr=MyDiff()
@@ -249,7 +256,10 @@ if has("autocmd")
 
 	" make the jump based on ctags with mod:fun
 	autocmd FileType erlang setlocal iskeyword+=:
-	autocmd FileType *.impex set filetype=csv
+	autocmd FileType mail setlocal fo+=aw
+
+	autocmd BufRead,BufNewFile *.impex set filetype=csv 
+	" before setting this I have to know the default format of impex files fileencoding=utf-8
 
 	autocmd BufReadCmd *.jar,*.xpi call zip#Browse(expand("<amatch>"))
 	autocmd BufReadPre,BufNewFile rebar.config,sys.config set filetype=erlang
