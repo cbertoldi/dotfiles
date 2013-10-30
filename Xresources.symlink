@@ -53,53 +53,33 @@ xterm*bellIsUrgent: true
 ! BLK
 #define _color0        #000000
 #define _color8        #545454
-
 ! RED
-! TomorrowNightEighties.t_red
-#define _color1        #DB0404
-#define _color9        #FC5454
-
+#define _color1        #FC4343
+#define _color9        #FC6D6D
 ! GRN
-! TomorrowNightEighties.t_green
 #define _color2        #54FC54
 #define _color10       #63F163
-
 ! YEL
-! TomorrowNight.t_orange
 #define _color3        #FFD75F
-! TomorrowNight.t_yellow
-#define _color11       #FFCD36
-
+!#FFD75F
+#define _color11       #F0EF78
 ! BLU
-! TomorrowNight.t_blue
-#define _color4        #4660FF
-#define _color12       #7081FF
-
+#define _color4        #4096FF
+#define _color12       #0E90FF
 ! MAG
-! TomorrowNightEighties.t_purple
-#define _color5        #F67EF5
-#define _color13       #FD86FC
-
+#define _color5        #FF9BFE
+#define _color13       #FFA0FE
 ! CYN
-! TomorrowNightEighties.t_aqua(hue,value) + TomorrowNight.t_aqua(saturation)
 #define _color6        #81CCCC
 #define _color14       #6DE7E6 
-
 ! WHT
-! TomorrowNightEighties.t_selection
 #define _color7        #DDDDDD
-! TomorrowNightEighties.t_current_line
 #define _color15       #FFFFFF
-
 ! FMT
 #define _colorBD       #FFFFFF
 #define _colorUL       #FFFFFF
-#define _colorIT       #FFFFFF
-
 ! TXT
-! TomorrowNightEighties.t_foreground
 #define _foreground    #C8C8C8
-! TomorrowNightEighties.t_background
 #define _background    #303030
 #define _cursorColor   #DDDDDD
 ! indian red
