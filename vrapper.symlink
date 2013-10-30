@@ -1,0 +1,7 @@
+set ignorecase
+set smartcase
+
+set incsearch
+
+" Quickly switch off hlsearch
+nmap <silent> ./ :nohlsearch<CR>
