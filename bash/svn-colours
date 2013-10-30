@@ -37,7 +37,7 @@ function svn
 	then
 		eval $(which svn) $CMD | while IFS= read -r RL
 		do
-			if   [[ $RL =~ ^\ ?M ]]; then C="\033[34m";
+			if   [[ $RL =~ ^\ ?M ]]; then C="\033[34m\033[1m";
 			elif [[ $RL =~ ^\ ?C ]]; then C="\033[41m\033[37m\033[1m";
 			elif [[ $RL =~ ^A ]]; then C="\033[32m\033[1m";
 			elif [[ $RL =~ ^D ]]; then C="\033[31m\033[1m";
@@ -80,4 +80,3 @@ function svn
 		eval $(which svn) $CMD
 	fi
 }
-
