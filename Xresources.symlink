@@ -29,24 +29,24 @@ xscreensaver.passwd.thermometer.width:       8
 xscreensaver.dateFormat:    %I:%M%P %a %b %d, %Y
 
 ! Xft settings 
-Xft.dpi:        96
-Xft.antialias:  false
-Xft.rgba:       rgb
-Xft.hinting:    true
-Xft.hintstyle:  hintslight
-Xft.lcdfilter: 	lcddefault
+Xft.dpi:              96
+Xft.antialias:        false
+Xft.rgba:             rgb
+Xft.hinting:          true
+Xft.hintstyle:        hintslight
+Xft.lcdfilter:        lcddefault
 
-URxvt*loginShell: true
-URxvt*geometry: 100x50
-URxvt*saveLines: 10000
-URxvt*cutchars: "`\"'&()*,:;<=>?[\\]^{|}$"
+URxvt*loginShell:     true
+URxvt*geometry:       100x50
+URxvt*saveLines:      10000
+URxvt*cutchars:       "`\\"'&()*,:;<=>?[\\\\]^{|}$"
 
-xterm*termName: xterm-256color
+xterm*termName:       xterm-256color
 xterm*VT100.geometry: 100x50
-xterm*saveLines: 10000
-xterm*charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
-xterm*visualBell: true
-xterm*bellIsUrgent: true
+xterm*saveLines:      10000
+xterm*charClass:      33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
+xterm*visualBell:     true
+xterm*bellIsUrgent:   true
 !33:48,36-38:48,43-47:48,58:48,61:48,63-64:48,126:48
 
 ! First the normal color, then the bold one
@@ -138,19 +138,20 @@ URxvt*italicfont: xft:inconsolata:size=10.5, xft:dejavu sans mono:size=9
 URxvt*bolditalicfont: xft:inconsolata:size=10.5, xft:dejavu sans mono:size=9
 
 !XTerm*faceName: inconsolata, dejavu sans mono
-xterm*faceName: Inconsolata:size=11:antialias=false
-xterm*colorULMode: true
+xterm*faceName    : Inconsolata : size=11 : antialias=false
+xterm*colorULMode : true
 !XTerm*faceSize: 11
 !URxvt*font: xft:droid sans mono:size=9
 !URxvt*font: xft:dejavu sans mono:size=9
 !URxvt*italicFont: DejaVu Sans Mono Book 9
-URxvt*scrollBar: false
-URxvt*scrollTtyKeypress: true
-URxvt*urgentOnBell: true
+URxvt*scrollBar         : false
+URxvt*scrollTtyKeypress : true
+URxvt*scrollTtyOutput   : false
+URxvt*urgentOnBell      : true
 
-URxvt*visualBell: true
-URxvt*letterSpace: -1
-URxvt*fading: 15
+URxvt*visualBell  : true
+URxvt*letterSpace : -1
+URxvt*fading      : 15
 
 URxvt*perl-ext-common : default,matcher
 URxvt*urlLauncher     : firefox
