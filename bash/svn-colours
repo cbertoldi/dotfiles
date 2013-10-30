@@ -1,5 +1,3 @@
-#!/bin/bash
-
 function svn
 {
 	# rebuild args to get quotes right
