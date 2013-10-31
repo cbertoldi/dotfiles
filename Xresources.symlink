@@ -155,7 +155,7 @@ URxvt*fading      : 15
 
 URxvt*perl-ext-common : default,matcher
 URxvt*urlLauncher     : firefox
-URxvt*matcher.button  : 1
+URxvt*matcher.button  : 2
 
 URxvt.iso14755 : false
 
