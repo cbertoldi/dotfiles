@@ -1,3 +1,5 @@
 # config file for rlwrap
 set editing-mode vi
 C-L: clear-screen
+
+set match-hidden-files off
