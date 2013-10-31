@@ -39,7 +39,7 @@ Xft.lcdfilter:        lcddefault
 URxvt*loginShell:     true
 URxvt*geometry:       100x50
 URxvt*saveLines:      10000
-URxvt*cutchars:       "`\\"'&()*,:;<=>?[\\\\]^{|}$"
+URxvt*cutchars:       "\"`'%&()*,:;<=>?@[]{|}$"
 
 xterm*termName:       xterm-256color
 xterm*VT100.geometry: 100x50
