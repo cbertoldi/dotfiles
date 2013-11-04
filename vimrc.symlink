@@ -180,43 +180,6 @@ let Tlist_Ctags_Cmd='/opt/local/bin/ctags'
 "   silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3 . eq
 " endfunction
 
-function! PoundComment()
-	  map - 0I# <ESC>j
-	  map _ :s/^\s*# \=//g<CR>j
-	  set comments=:#
-endfunction
-
-function! HTMLComment()
-	  map - $a --><ESC>0i<!-- <ESC><CR>
-	  map _ :s/^\s*<!-- \=//g<CR>:s/ \=-->[ \t]*$//g<CR>j
-	  set tw=0 formatoptions=tcq
-endfunction
-
-function! CPlusPlusComment()
-	  map - 0i// <ESC>j
-	  map _ :s/^\s*\/\/ \=//g<CR>j
-	  "set nocindent comments=:\/\/
-endfunction
-
-function! CComment()
-	  map - $a */<ESC>0i/* <ESC><CR>
-	  map _ :s/^\s*\/\* \=//g<CR>:s/ \=\*\/[ \t]*$//g<CR>j
-	  set nocindent comments=sr:/*,mb:*,ex:*/,://
-	  "     set nocindent comments=:/*,://
-endfunction
-
-function! SQLComment()
-	map - 0I-- <ESC>j
-	map _ :s/^\s--//g<CR>j
-endfunction
-
-function! ErlComment()
-	map - 0I% <ESC>j
-	map _ :s/^\s*% \=//g<CR>j
-	set comments=:%
-endfunction
-
-
 if has("autocmd")
 	autocmd FileType html,htm set tabstop=2 formatoptions+=tl sw=2 tw=0
 	autocmd FileType erlang set tabstop=4 sw=4 tw=80 expandtab formatoptions-=ro
@@ -230,17 +193,6 @@ if has("autocmd")
 	autocmd FileType objc set tw=120
 	autocmd FileType markdown set expandtab tabstop=4 sw=4 tw=80
 	autocmd FileType yaml set expandtab tabstop=2 sw=2
-
-	autocmd FileType sh call PoundComment()
-	autocmd FileType html call HTMLComment()
-	autocmd FileType perl call PoundComment()
-	autocmd FileType c call CComment()
-	autocmd FileType cpp call CPlusPlusComment()
-	autocmd FileType java call CPlusPlusComment()
-	autocmd FileType sql call SQLComment()
-	autocmd FileType erlang call ErlComment()
-	autocmd FileType *.py call PoundComment()
-	autocmd FileType objc call CPlusPlusComment()
 
 	autocmd FileType * let g:AutoComplPop_CompleteOption = '.,w,b,u,t,i'
 	autocmd FileType perl let g:AutoComplPop_CompleteOption = '.,w,b,u,t,k~/.vim/dict/perl.dict'
