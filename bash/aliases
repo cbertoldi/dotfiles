@@ -16,6 +16,11 @@ alias j="jobs"
 alias gdb="gdb -q"
 alias ssh="TERM=xterm-256color ssh"
 alias vagrant="TERM=xterm-256color vagrant"
+alias urxvt='urxvt -bg "#303030" -fg "#C8C8C8"'
+
+# SVN
+alias sup='svn merge --dry-run -r BASE:HEAD .'
+alias svnrev="git svn find-rev HEAD"
 
 if [ "$(uname -s)" == "Darwin" ]
 then
