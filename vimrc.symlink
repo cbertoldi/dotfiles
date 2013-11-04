@@ -26,9 +26,9 @@ if has('win32') || has('win64')
 	" I have to add this because on this machine $HOME is a network folder
 	let $HOME = $USERPROFILE
     set runtimepath=$HOME/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after
-	" Yes, it says that Windows is totally bullshit! :[
 	
  	set guifont=Consolas:h10:cDEFAULT
+	" Yes, it says that Windows is totally bullshit! :[
 	set bs=2
 	set clipboard=unnamed
 	map <C-c> y
@@ -43,6 +43,7 @@ elseif has("mac")
 	let g:small_font = "Menlo\\ Regular:h2"
 else 
 	set guifont=Inconsolata\ Medium\ 10,Droid\ Sans\ Mono\ 9,DejaVu\ Sans\ Mono\ 9
+	set clipboard=unnamedplus
 endif
 
 " Try to save backup and swap files in private directory, fallback to $TMP
