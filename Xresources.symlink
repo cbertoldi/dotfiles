@@ -138,12 +138,19 @@ URxvt*italicfont: xft:inconsolata:size=10.5, xft:dejavu sans mono:size=9
 URxvt*bolditalicfont: xft:inconsolata:size=10.5, xft:dejavu sans mono:size=9
 
 !XTerm*faceName: inconsolata, dejavu sans mono
-xterm*faceName    : Inconsolata : size=11 : antialias=false
+XTerm*faceName    : Inconsolata
+xterm*faceSize    : 10.5
+XTerm*antialias   : false
 xterm*colorULMode : true
-!XTerm*faceSize: 11
-!URxvt*font: xft:droid sans mono:size=9
-!URxvt*font: xft:dejavu sans mono:size=9
-!URxvt*italicFont: DejaVu Sans Mono Book 9
+
+! Unreadable, Tiny, Small, Medium, Large and Huge
+xterm*faceSize1   : 7
+xterm*faceSize2   : 9
+xterm*faceSize3   : 10.5
+xterm*faceSize4   : 11
+xterm*faceSize5   : 15
+xterm*faceSize6   : 20
+
 URxvt*scrollBar         : false
 URxvt*scrollTtyKeypress : true
 URxvt*scrollTtyOutput   : false
@@ -164,3 +171,4 @@ URxvt.keysym.C-V: perl:clipboard:paste
 !URxvt*iconFile : /usr/share/icons/elementary-xfce/HighContrast/scalable/apps/utilities-terminal.svg
 
 // URxvt spells "eightBitInput" as "meta8" and defaults it to false
+! URxvt.meta8     : true
