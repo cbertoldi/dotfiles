@@ -52,7 +52,7 @@ xterm*bellIsUrgent:   true
 ! First the normal color, then the bold one
 ! BLK
 #define _color0        #000000
-#define _color8        #545454
+#define _color8        #ABABAB
 ! RED
 #define _color1        #FC4343
 #define _color9        #FC6D6D
