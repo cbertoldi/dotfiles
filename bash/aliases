@@ -14,8 +14,7 @@ alias jad="jad -s java"
 alias ..="cd .."
 alias j="jobs"
 alias gdb="gdb -q"
-alias ssh="TERM=xterm-256color ssh"
-alias vagrant="TERM=xterm-256color vagrant"
+alias cls="echo -ne '\033c'"
 alias urxvt='urxvt -bg "#303030" -fg "#C8C8C8"'
 
 # SVN
@@ -24,6 +23,8 @@ alias svnrev="git svn find-rev HEAD"
 
 if [ "$(uname -s)" == "Darwin" ]
 then
+	alias ssh="TERM=xterm-256color ssh"
+	alias vagrant="TERM=xterm-256color vagrant"
 	alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
 	alias vi="/Applications/MacVim.app/Contents/MacOS/Vim"
 	alias view="/Applications/MacVim.app/Contents/MacOS/Vim -R"
