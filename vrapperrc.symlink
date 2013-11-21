@@ -5,3 +5,4 @@ set incsearch
 
 " Quickly switch off hlsearch
 nmap <silent> ./ :nohlsearch<CR>
+noremap <C-Q>	<C-V>
