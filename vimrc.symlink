@@ -42,7 +42,7 @@ elseif has("mac")
 	let g:main_font = "Menlo\\ Regular:h11"
 	let g:small_font = "Menlo\\ Regular:h2"
 else 
-	set guifont=Inconsolata\ Medium\ 10,Droid\ Sans\ Mono\ 9,DejaVu\ Sans\ Mono\ 9
+	set guifont=Inconsolata\ Medium\ 10.5,Droid\ Sans\ Mono\ 9,DejaVu\ Sans\ Mono\ 9
 	set clipboard=unnamedplus
 endif
 
