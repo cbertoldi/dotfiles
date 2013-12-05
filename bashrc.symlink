@@ -6,8 +6,10 @@ then
 	. ~/.localrc
 fi
 
+UNAME=`uname -s`
+
 # completion
-if [ "$(uname -s)" == "Darwin" ]; then
+if [ "$UNAME" == "Darwin" ]; then
 	if [ -f /opt/local/etc/profile.d/bash_completion.sh ]; then
 		. /opt/local/etc/profile.d/bash_completion.sh
 	fi
@@ -31,7 +33,7 @@ export JBOSS_HOME=~/jboss-5.1.0.GA
 export RLWRAP_HOME=~/rlwrap
 
 # mac 
-if [ "$(uname -s)" == "Darwin" ]
+if [ "$UNAME" == "Darwin" ]
 then
 	# ruby MacOS
 	[[ -s "/Users/carlo/.rvm/scripts/rvm" ]] && source "/Users/carlo/.rvm/scripts/rvm"
@@ -55,7 +57,7 @@ then
 
 	# Linux wants LS_COLORS with a different syntax
 	export LSCOLORS="exgxcxdxcxegedabagacad"
-elif [ "$(uname -s)" == "Linux" ]
+elif [ "$UNAME" == "Linux" ]
 then
 	export VISUAL=vim
 	export SVN_EDITOR=vim
@@ -109,10 +111,11 @@ export LANG="en_US"
 export LANGUAGE="en_US"
 export LC_ALL="en_US.UTF-8"
 
-if [ "$(uname -s)" == "Darwin" ]
+if [ "$UNAME" == "Darwin" ]
 then
 	export TERM=xterm-256color
-	if [ -e /usr/share/terminfo/x/xterm-256color ]; then
+	if [ -e /usr/share/terminfo/x/xterm-256color ]
+	then
 		export TERM='xterm-256color'
 	elif [[ $(toe | grep -m 1 256) ]]
 	then
@@ -120,9 +123,12 @@ then
 	else
 		export TERM='xterm-color'
 	fi
+elif [ -n "$COMSPEC" -a -x "$COMSPEC" ]
+then
+	export TERM="cygwin"
 fi
 
-if [ "$(uname -s)" == "Darwin" ]
+if [ "$UNAME" == "Darwin" ]
 then
 	growl() { echo -e $'\e]9;'${1}'\007' ; return ; }
 
