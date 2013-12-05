@@ -156,6 +156,8 @@ URxvt*scrollTtyKeypress : true
 URxvt*scrollTtyOutput   : false
 URxvt*urgentOnBell      : true
 
+XTerm*scrollttyoutput   : false
+
 URxvt*visualBell  : true
 URxvt*letterSpace : -1
 URxvt*fading      : 15
