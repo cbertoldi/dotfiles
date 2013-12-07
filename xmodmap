@@ -1,0 +1,4 @@
+! If using a MBP with italian keyboard and US International layout we need to
+! remap the tilde.
+keycode 49 = less greater less greater
+keycode 94 = dead_grave dead_tilde dead_grave dead_tilde
