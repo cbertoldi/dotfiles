@@ -63,7 +63,7 @@ then
 	export SVN_EDITOR=vim
 	export PATH=~/bin:$PATH:$ANT_HOME/bin
 else
-	export JAVA_HOME=/usr/java/
+	export JAVA_HOME="/usr/lib/jvm/java-7-oracle"
 	export PATH=~/bin:$PATH
 fi
 export set JAVA_OPTS="$JAVA_OPTS -Dfile.encoding=UTF8" 
