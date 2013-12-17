@@ -1,4 +1,4 @@
-#Thu Nov 28 10:27:07 CET 2013
+#Mon Dec 09 16:22:35 CET 2013
 /instance/org.eclipse.jdt.ui/semanticHighlighting.typeParameter.enabled=true
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_new_line_after_label=do not insert
 /instance/com.adobe.flexide.as.core/asASDocColor=\#67C3E7
@@ -40,7 +40,7 @@
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.brace_position_for_array_initializer=next_line
 /instance/org.eclipse.wst.xml.ui/doctypeExtrenalSysref=\#FFFFFF | null | null | null | null | null
 /instance/org.eclipse.jdt.ui/sp_cleanup.remove_unnecessary_casts=true
-/instance/org.eclipse.egit.ui/resourcehistory_rev_split=700,300
+/instance/org.eclipse.egit.ui/resourcehistory_rev_split=512,485
 /instance/ccw.core/ccw.preferences.editor_color.MACRO.enabled=true
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.alignment_for_enum_constants=0
 /instance/org.eclipse.dltk.tcl.ui/DLTK_keyword=246,224,107
@@ -91,7 +91,7 @@
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_space_before_opening_angle_bracket_in_parameterized_type_reference=do not insert
 /instance/edu.umd.cs.findbugs.plugin.eclipse/detectorFindFieldSelfAssignment=FindFieldSelfAssignment|true
 /instance/edu.umd.cs.findbugs.plugin.eclipse/filter_settings_neg=MALICIOUS_CODE,NOISE,I18N,SECURITY,EXPERIMENTAL|
-/instance/org.eclipse.jdt.ui/content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="java.util.EventObject"><rhs name\="org.springframework.context.event.ContextStartedEvent"/></lhs><lhs name\="org.springframework.context.ApplicationEvent"><rhs name\="org.springframework.context.event.ContextStartedEvent"/></lhs><lhs name\="de.sick.core.atp.dto.AtpRequestData"><rhs name\="de.sick.core.atp.dto.AtpRequestData"/></lhs><lhs name\="de.sick.core.atp.ws.ObjectFactory"><rhs name\="de.sick.core.atp.ws.ObjectFactory"/></lhs><lhs name\="de.hybris.platform.converters.Populator"><rhs name\="de.sick.core.atp.converter.AtpReceiveMessageResponsePopulator"/></lhs><lhs name\="de.sick.core.atp.converter.AtpReceiveMessageResponsePopulator"><rhs name\="de.sick.core.atp.converter.AtpReceiveMessageResponsePopulator"/></lhs><lhs name\="java.lang.Cloneable"><rhs name\="java.util.GregorianCalendar"/></lhs><lhs name\="java.util.Calendar"><rhs name\="java.util.GregorianCalendar"/></lhs><lhs name\="org.joda.time.ReadableDateTime"><rhs name\="org.joda.time.DateTime"/></lhs><lhs name\="org.joda.time.ReadableInstant"><rhs name\="org.joda.time.DateTime"/></lhs><lhs name\="org.joda.time.base.BaseDateTime"><rhs name\="org.joda.time.DateTime"/></lhs><lhs name\="org.joda.time.base.AbstractDateTime"><rhs name\="org.joda.time.DateTime"/></lhs><lhs name\="org.joda.time.base.AbstractInstant"><rhs name\="org.joda.time.DateTime"/></lhs><lhs name\="de.sick.core.atp.AtpServiceMock"><rhs name\="de.sick.core.atp.AtpServiceMock"/></lhs><lhs name\="de.sick.core.atp.AtpOrderInfoService"><rhs name\="de.sick.core.atp.impl.TestAtpOrderInfoService"/></lhs><lhs name\="de.sick.core.atp.impl.TestAtpOrderInfoService"><rhs name\="de.sick.core.atp.impl.TestAtpOrderInfoService"/></lhs></history>
+/instance/org.eclipse.jdt.ui/content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="java.util.EventObject"><rhs name\="org.springframework.context.event.ContextStartedEvent"/></lhs><lhs name\="org.springframework.context.ApplicationEvent"><rhs name\="org.springframework.context.event.ContextStartedEvent"/></lhs><lhs name\="de.sick.core.atp.dto.AtpRequestData"><rhs name\="de.sick.core.atp.dto.AtpRequestData"/></lhs><lhs name\="de.sick.core.atp.ws.ObjectFactory"><rhs name\="de.sick.core.atp.ws.ObjectFactory"/></lhs><lhs name\="de.hybris.platform.converters.Populator"><rhs name\="de.sick.core.atp.converter.AtpReceiveMessageResponsePopulator"/></lhs><lhs name\="de.sick.core.atp.converter.AtpReceiveMessageResponsePopulator"><rhs name\="de.sick.core.atp.converter.AtpReceiveMessageResponsePopulator"/></lhs><lhs name\="java.lang.Cloneable"><rhs name\="java.util.GregorianCalendar"/></lhs><lhs name\="java.util.Calendar"><rhs name\="java.util.GregorianCalendar"/></lhs><lhs name\="org.joda.time.ReadableDateTime"><rhs name\="org.joda.time.DateTime"/></lhs><lhs name\="org.joda.time.ReadableInstant"><rhs name\="org.joda.time.DateTime"/></lhs><lhs name\="org.joda.time.base.BaseDateTime"><rhs name\="org.joda.time.DateTime"/></lhs><lhs name\="org.joda.time.base.AbstractDateTime"><rhs name\="org.joda.time.DateTime"/></lhs><lhs name\="org.joda.time.base.AbstractInstant"><rhs name\="org.joda.time.DateTime"/></lhs><lhs name\="de.sick.core.atp.AtpServiceMock"><rhs name\="de.sick.core.atp.AtpServiceMock"/></lhs><lhs name\="de.sick.core.atp.AtpOrderInfoService"><rhs name\="de.sick.core.atp.impl.TestAtpOrderInfoService"/></lhs><lhs name\="de.sick.core.atp.impl.TestAtpOrderInfoService"><rhs name\="de.sick.core.atp.impl.TestAtpOrderInfoService"/></lhs><lhs name\="de.hybris.platform.core.model.user.UserGroupModel"><rhs name\="de.hybris.platform.b2b.model.B2BUnitModel"/></lhs><lhs name\="de.hybris.platform.core.model.security.PrincipalGroupModel"><rhs name\="de.hybris.platform.b2b.model.B2BUnitModel"/></lhs><lhs name\="de.hybris.platform.core.model.security.PrincipalModel"><rhs name\="de.hybris.platform.b2b.model.B2BUnitModel"/><rhs name\="de.sick.core.model.SickCustomerModel"/></lhs><lhs name\="de.hybris.platform.core.model.ItemModel"><rhs name\="de.hybris.platform.b2b.model.B2BUnitModel"/><rhs name\="de.sick.core.model.SickCustomerModel"/></lhs><lhs name\="de.hybris.platform.servicelayer.model.AbstractItemModel"><rhs name\="de.hybris.platform.b2b.model.B2BUnitModel"/><rhs name\="de.sick.core.model.SickCustomerModel"/></lhs><lhs name\="de.hybris.platform.catalog.model.CompanyModel"><rhs name\="de.hybris.platform.b2b.model.B2BUnitModel"/></lhs><lhs name\="de.hybris.platform.core.model.user.UserModel"><rhs name\="de.sick.core.model.SickCustomerModel"/></lhs><lhs name\="de.sick.facades.order.SickCheckoutFacade"><rhs name\="de.sick.facades.order.impl.DefaultSickCheckoutFacade"/></lhs><lhs name\="de.hybris.platform.b2bacceleratorfacades.order.B2BCheckoutFacade"><rhs name\="de.sick.facades.order.impl.DefaultSickCheckoutFacade"/></lhs><lhs name\="de.hybris.platform.commercefacades.order.CheckoutFacade"><rhs name\="de.sick.facades.order.impl.DefaultSickCheckoutFacade"/></lhs><lhs name\="de.hybris.platform.b2bacceleratorfacades.order.impl.DefaultB2BCheckoutFacade"><rhs name\="de.sick.facades.order.impl.DefaultSickCheckoutFacade"/></lhs><lhs name\="de.hybris.platform.commercefacades.order.impl.DefaultCheckoutFacade"><rhs name\="de.sick.facades.order.impl.DefaultSickCheckoutFacade"/></lhs><lhs name\="de.sick.facades.order.impl.DefaultSickCheckoutFacade"><rhs name\="de.sick.facades.order.impl.DefaultSickCheckoutFacade"/></lhs><lhs name\="de.sick.core.order.billing.SickBillingService"><rhs name\="de.sick.core.order.billing.impl.DefaultSickBillingService"/></lhs><lhs name\="de.sick.core.order.billing.impl.DefaultSickBillingService"><rhs name\="de.sick.core.order.billing.impl.DefaultSickBillingService"/></lhs><lhs name\="de.sick.core.atp.SickAtpResponseFactory"><rhs name\="de.sick.core.atp.impl.DefaultSickAtpResponseFactory"/></lhs><lhs name\="de.sick.core.atp.AbstractSickAtpResponseFactory"><rhs name\="de.sick.core.atp.impl.DefaultSickAtpResponseFactory"/></lhs><lhs name\="de.sick.core.atp.impl.DefaultSickAtpResponseFactory"><rhs name\="de.sick.core.atp.impl.DefaultSickAtpResponseFactory"/></lhs></history>
 /instance/org.codehaus.groovy.eclipse.ui/semanticHighlighting.typeParameter.enabled=true
 /instance/org.eclipse.cdt.ui/semanticHighlighting.localVariable.enabled=true
 /instance/org.eclipse.jdt.ui/sp_cleanup.qualify_static_field_accesses_with_declaring_class=false
@@ -242,7 +242,7 @@
 @org.eclipse.wst.xml.ui=1.1.401.v201308132110
 /instance/edu.umd.cs.findbugs.plugin.eclipse/detectorUncallableMethodOfAnonymousClass=UncallableMethodOfAnonymousClass|true
 /instance/ccw.core/ccw.preferences.editor_color.FUNCTION=255,255,255
-/instance/org.eclipse.ui.ide/platformState=1380887166086
+/instance/org.eclipse.ui.ide/platformState=1380887166111
 /instance/org.eclipse.jdt.ui/useQuickDiffPrefPage=true
 /instance/org.codehaus.groovy.eclipse.ui/semanticHighlighting.staticField.color=255,255,255
 /instance/com.powerflasher.fdt.ui/com.powerflasher.fdt.ui.mxml.mxmlHighlightGenerator.AS3.MXMLComment_enabled=true
@@ -393,6 +393,7 @@
 /configuration/org.eclipse.core.net/proxyData/HTTP/port=3128
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_space_after_comma_in_superinterfaces=insert
 /instance/com.powerflasher.fdt.ui/com.powerflasher.fdt.ui.AS3SemanticHighlightGenerator.AS3.RegEx_color=255,142,141
+/instance/org.eclipse.ui.workbench/OUTGOING_COLOR=144,238,144
 /instance/ccw.core/ccw.preferences.editor_color.callableJAVA_INSTANCE_METHOD=130,249,133
 /instance/ccw.core/ccw.preferences.editor_color.callableGLOBAL_VAR.enabled=true
 /instance/ccw.core/ccw.preferences.editor_color.GLOBAL_VAR.enabled=true
@@ -425,6 +426,7 @@
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.alignment_for_multiple_fields=16
 /instance/edu.umd.cs.findbugs.plugin.eclipse/detectorInstantiateStaticClass=InstantiateStaticClass|true
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_space_after_opening_paren_in_synchronized=do not insert
+/instance/org.eclipse.wst.html.ui/html_content_assist_default_page_sort_order=org.eclipse.wst.html.ui.proposalCategory.htmlTags\u0000org.eclipse.wst.css.ui.proposalCategory.css\u0000org.eclipse.wst.html.ui.proposalCategory.htmlTemplates\u0000org.eclipse.wst.css.ui.proposalCategory.cssTemplates\u0000
 /instance/de.walware.statet.r.ui/text_Rd_rdPlatformSpecif.color=181,169,75
 /instance/org.eclipse.dltk.ruby.ui/content_assist_parameters_foreground=255,255,255
 /instance/org.eclipse.cdt.make.ui/org.eclipse.cdt.make.ui.editor.keyword=246,224,107
@@ -643,7 +645,6 @@
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.comment.line_length=120
 /instance/org.eclipse.debug.ui/org.eclipse.debug.ui.PREF_LAUNCH_PERSPECTIVES=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\n<launchPerspectives/>\n
 /instance/org.eclipse.php.ui/semanticHighlighting.org.eclipse.php.internal.ui.editor.highlighters.ClassHighlighting.enabled=true
-@org.eclipse.wst.xsd.ui=1.2.500.v201203081826
 /instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.text.code_templates_migrated=true
 /instance/org.epic.perleditor/comment2Color=103,195,231
 /instance/org.eclipse.core.runtime/line.separator=\r\n
@@ -712,7 +713,7 @@
 /instance/org.eclipse.wst.xml.ui/doctypeExternalPubref=\#FFFFFF | null | null | null | null | null
 /instance/org.erlide.ui/editor/colors/integer/color=198,73,71
 /instance/de.walware.statet.base.ui/MatchingBrackets.color=83,83,83
-/instance/org.eclipse.debug.ui/pref_state_memento.org.eclipse.debug.ui.VariableView=<?xml version\="1.0" encoding\="UTF-8"?>\n<VariablesViewMemento org.eclipse.debug.ui.SASH_DETAILS_PART\="315" org.eclipse.debug.ui.SASH_VIEW_PART\="684">\n<COLUMN_SIZES IMemento.internal.id\="org.eclipse.debug.ui.VARIALBE_COLUMN_PRESENTATION.COL_VAR_NAME" SIZE\="450"/>\n<COLUMN_SIZES IMemento.internal.id\="org.eclipse.debug.ui.VARIALBE_COLUMN_PRESENTATION.COL_VAR_VALUE" SIZE\="451"/>\n<PRESENTATION_CONTEXT_PROPERTIES IMemento.internal.id\="org.eclipse.debug.ui.VariableView"/>\n</VariablesViewMemento>
+/instance/org.eclipse.debug.ui/pref_state_memento.org.eclipse.debug.ui.VariableView=<?xml version\="1.0" encoding\="UTF-8"?>\n<VariablesViewMemento org.eclipse.debug.ui.SASH_DETAILS_PART\="315" org.eclipse.debug.ui.SASH_VIEW_PART\="684">\n<COLUMN_SIZES IMemento.internal.id\="org.eclipse.debug.ui.VARIALBE_COLUMN_PRESENTATION.COL_VAR_NAME" SIZE\="450"/>\n<COLUMN_SIZES IMemento.internal.id\="org.eclipse.debug.ui.VARIALBE_COLUMN_PRESENTATION.COL_VAR_VALUE" SIZE\="482"/>\n<PRESENTATION_CONTEXT_PROPERTIES IMemento.internal.id\="org.eclipse.debug.ui.VariableView"/>\n</VariablesViewMemento>
 /instance/org.eclipse.dltk.tcl.ui/DLTK_function_definition=255,255,255
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_space_after_comma_in_enum_declarations=insert
 /instance/org.python.pydev/EDITOR_MATCHING_BRACKETS_COLOR=255,255,255
@@ -871,7 +872,7 @@
 /instance/edu.umd.cs.findbugs.plugin.eclipse/detectorFindUnrelatedTypesInGenericContainer=FindUnrelatedTypesInGenericContainer|true
 /instance/com.powerflasher.fdt.ui/com.powerflasher.fdt.ui.AS3SemanticHighlightGenerator.AS3.XMLCDATATag_enabled=true
 /instance/org.eclipse.cdt.ui/c_multi_line_comment=103,195,231
-/instance/org.eclipse.jdt.ui/content_assist_favorite_static_members=org.mockito.Mockito.*
+/instance/org.eclipse.jdt.ui/content_assist_favorite_static_members=org.mockito.Mockito.*;org.mockito.Matchers.*;org.junit.Assert.*;org.junit.matchers.JUnitMatchers.*
 @org.eclipse.mylyn.tasks.ui=3.9.1.v20130917-0100
 /instance/org.codehaus.groovy.eclipse.ui/semanticHighlighting.localVariable.color=182,177,147
 /instance/org.eclipse.cdt.ui/semanticHighlighting.localVariableDeclaration.color=182,177,147
@@ -893,7 +894,6 @@
 /instance/edu.umd.cs.findbugs.plugin.eclipse/detectorDefaultEncodingDetector=DefaultEncodingDetector|true
 /instance/com.adobe.flexide.css.core/cssSelectorColor=\#B6B193
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_space_before_comma_in_method_declaration_parameters=do not insert
-/instance/org.eclipse.wst.xsd.ui/org.eclipse.wst.xsd.ui.internal.defaultPage=org.eclipse.wst.xsd.ui.internal.sourcePage
 /instance/net.sourceforge.texlipse/sqr.TexColor=198,73,71
 /instance/org.erlide.ui/editor/colors/default/color=255,255,255
 /instance/org.eclipse.wst.html.ui/xmlContent=\#FFFFFF | null | null | null | null | null
@@ -915,7 +915,7 @@
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.number_of_empty_lines_to_preserve=50
 /instance/net.sf.eclipsecs.core/background.full.build=false
 /instance/edu.umd.cs.findbugs.plugin.eclipse/detectorDuplicateBranches=DuplicateBranches|true
-@org.zeroturnaround.eclipse=5.4.1.SR1-201311061306
+@org.zeroturnaround.eclipse=5.4.2.RELEASE-201311281027
 /instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.importorder=de.hybris;java;javax;org;com;de;
 /instance/org.codehaus.groovy.eclipse.ui/groovy.editor.highlight.javakeywords.color=246,224,107
 @org.eclipse.wst.ws.service.policy=1.0.303.v201009221810
@@ -986,6 +986,7 @@
 /instance/org.scala-ide.sdt.core/syntaxColouring.scaladoc.colour=103,195,231
 /instance/ccw.core/ccw.preferences.editor_color.callableJAVA_CLASS.italic=false
 /instance/org.eclipse.wst.jsdt.ui/semanticHighlighting.localVariable.enabled=true
+/instance/org.eclipse.wst.jsdt.web.core/jspIndexState=1
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_space_after_opening_paren_in_annotation=do not insert
 /instance/com.powerflasher.fdt.ui/com.powerflasher.fdt.ui.mxml.mxmlHighlightGenerator.AS3.MXMLComment_color=103,195,231
 /instance/org.eclipse.jdt.ui/semanticHighlighting.method.enabled=true
@@ -1036,7 +1037,7 @@
 /instance/org.eclipse.ui.workbench/org.eclipse.jdt.ui.JavadocView.backgroundColor=94,94,94
 /instance/org.eclipse.ui.editors/fullcoverage_stylePreferences=NONE
 /instance/org.fhsolution.eclipse.plugins.csvedit/delimiterPreference=;
-/instance/org.eclipse.debug.ui/preferredDetailPanes=DefaultDetailPane\:DefaultDetailPane|
+/instance/org.eclipse.debug.ui/preferredDetailPanes=DefaultDetailPane\:DefaultDetailPane|org.eclipse.jdt.debug.ui.DETAIL_PANE_LINE_BREAKPOINT\:org.eclipse.jdt.debug.ui.DETAIL_PANE_LINE_BREAKPOINT|
 /instance/org.eclipse.ant.ui/org.eclipse.ant.ui.warningColor=246,161,105
 /instance/com.adobe.flexide.mxml.core/mxmlTagColor=\#B6B193
 /instance/org.eclipse.jst.jsp.ui/commentBorder=\#67C3E7 | null | null | null | null | null
@@ -1090,7 +1091,7 @@
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_space_after_comma_in_parameterized_type_reference=insert
 /instance/org.cfeclipse.cfml/cfcommentBackgroundColor=38,38,38
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_space_after_comma_in_constructor_declaration_throws=insert
-/instance/org.eclipse.ui.workbench/org.eclipse.ui.commands=<?xml version\="1.0" encoding\="UTF-8"?>\n<org.eclipse.ui.commands>\n<activeKeyConfiguration keyConfigurationId\="kg.totality.core.insert_mode"/>\n<keyBinding contextId\="org.eclipse.debug.ui.memoryview" keyConfigurationId\="org.eclipse.ui.defaultAcceleratorConfiguration" keySequence\="CTRL+W"/>\n<keyBinding contextId\="org.eclipse.debug.ui.memoryview" keyConfigurationId\="org.eclipse.ui.defaultAcceleratorConfiguration" keySequence\="CTRL+W"/>\n<keyBinding contextId\="org.eclipse.ui.contexts.window" keyConfigurationId\="org.eclipse.ui.defaultAcceleratorConfiguration" keySequence\="CTRL+U"/>\n<keyBinding contextId\="org.eclipse.ui.contexts.window" keyConfigurationId\="org.eclipse.ui.defaultAcceleratorConfiguration" keySequence\="CTRL+U"/>\n<keyBinding commandId\="org.eclipse.ui.edit.text.delete.line" contextId\="org.eclipse.ui.textEditorScope" keyConfigurationId\="kg.totality.core.insert_mode" keySequence\="CTRL+SHIFT+D"/>\n<keyBinding contextId\="org.eclipse.ui.textEditorScope" keyConfigurationId\="org.eclipse.ui.defaultAcceleratorConfiguration" keySequence\="CTRL+D"/>\n<keyBinding contextId\="org.eclipse.ui.textEditorScope" keyConfigurationId\="org.eclipse.ui.defaultAcceleratorConfiguration" keySequence\="CTRL+D"/>\n<keyBinding commandId\="org.eclipse.jdt.ui.edit.text.java.create.getter.setter" contextId\="org.eclipse.ui.contexts.window" keyConfigurationId\="org.eclipse.ui.defaultAcceleratorConfiguration" keySequence\="CTRL+SHIFT+G"/>\n<keyBinding contextId\="org.eclipse.wst.jsdt.ui.javascriptViewScope" keyConfigurationId\="org.eclipse.ui.defaultAcceleratorConfiguration" keySequence\="CTRL+SHIFT+G"/>\n<keyBinding contextId\="org.eclipse.wst.jsdt.ui.javascriptViewScope" keyConfigurationId\="org.eclipse.ui.defaultAcceleratorConfiguration" keySequence\="CTRL+SHIFT+G"/>\n<keyBinding contextId\="org.eclipse.ui.contexts.window" keyConfigurationId\="org.eclipse.ui.defaultAcceleratorConfiguration" keySequence\="CTRL+SHIFT+G"/>\n<keyBinding contextId\="org.eclipse.ui.contexts.window" keyConfigurationId\="org.eclipse.ui.defaultAcceleratorConfiguration" keySequence\="CTRL+SHIFT+G"/>\n<keyBinding commandId\="org.eclipse.ui.window.preferences" contextId\="org.eclipse.ui.contexts.window" keyConfigurationId\="org.eclipse.ui.defaultAcceleratorConfiguration" keySequence\="CTRL+L CTRL+L"/>\n<keyBinding contextId\="org.eclipse.ui.contexts.window" keyConfigurationId\="org.eclipse.ui.defaultAcceleratorConfiguration" keySequence\="CTRL+N"/>\n<keyBinding contextId\="org.eclipse.ui.contexts.window" keyConfigurationId\="org.eclipse.ui.defaultAcceleratorConfiguration" keySequence\="CTRL+N"/>\n<keyBinding contextId\="org.eclipse.ui.contexts.window" keyConfigurationId\="org.eclipse.ui.defaultAcceleratorConfiguration" keySequence\="CTRL+P"/>\n<keyBinding contextId\="org.eclipse.ui.contexts.window" keyConfigurationId\="org.eclipse.ui.defaultAcceleratorConfiguration" keySequence\="CTRL+P"/>\n<keyBinding commandId\="org.eclipse.ui.file.print" contextId\="org.eclipse.ui.contexts.window" keyConfigurationId\="kg.totality.core.insert_mode" keySequence\="CTRL+SHIFT+P"/>\n<keyBinding contextId\="org.eclipse.ui.contexts.window" keyConfigurationId\="org.eclipse.ui.defaultAcceleratorConfiguration" keySequence\="CTRL+W"/>\n<keyBinding contextId\="org.eclipse.ui.contexts.window" keyConfigurationId\="org.eclipse.ui.defaultAcceleratorConfiguration" keySequence\="CTRL+W"/>\n<keyBinding contextId\="org.eclipse.ui.contexts.window" keyConfigurationId\="org.eclipse.ui.defaultAcceleratorConfiguration" keySequence\="CTRL+Q"/>\n<keyBinding contextId\="org.eclipse.ui.contexts.window" keyConfigurationId\="org.eclipse.ui.defaultAcceleratorConfiguration" keySequence\="CTRL+Q"/>\n</org.eclipse.ui.commands>
+/instance/org.eclipse.ui.workbench/org.eclipse.ui.commands=<?xml version\="1.0" encoding\="UTF-8"?>\n<org.eclipse.ui.commands>\n<activeKeyConfiguration keyConfigurationId\="kg.totality.core.insert_mode"/>\n<keyBinding contextId\="org.eclipse.ui.contexts.window" keyConfigurationId\="org.eclipse.ui.defaultAcceleratorConfiguration" keySequence\="CTRL+Q"/>\n<keyBinding contextId\="org.eclipse.ui.contexts.window" keyConfigurationId\="org.eclipse.ui.defaultAcceleratorConfiguration" keySequence\="CTRL+Q"/>\n<keyBinding contextId\="org.eclipse.ui.contexts.window" keyConfigurationId\="org.eclipse.ui.defaultAcceleratorConfiguration" keySequence\="CTRL+W"/>\n<keyBinding contextId\="org.eclipse.ui.contexts.window" keyConfigurationId\="org.eclipse.ui.defaultAcceleratorConfiguration" keySequence\="CTRL+W"/>\n<keyBinding commandId\="org.eclipse.ui.file.print" contextId\="org.eclipse.ui.contexts.window" keyConfigurationId\="kg.totality.core.insert_mode" keySequence\="CTRL+SHIFT+P"/>\n<keyBinding contextId\="org.eclipse.ui.contexts.window" keyConfigurationId\="org.eclipse.ui.defaultAcceleratorConfiguration" keySequence\="CTRL+P"/>\n<keyBinding contextId\="org.eclipse.ui.contexts.window" keyConfigurationId\="org.eclipse.ui.defaultAcceleratorConfiguration" keySequence\="CTRL+P"/>\n<keyBinding contextId\="org.eclipse.ui.contexts.window" keyConfigurationId\="org.eclipse.ui.defaultAcceleratorConfiguration" keySequence\="CTRL+N"/>\n<keyBinding contextId\="org.eclipse.ui.contexts.window" keyConfigurationId\="org.eclipse.ui.defaultAcceleratorConfiguration" keySequence\="CTRL+N"/>\n<keyBinding commandId\="org.eclipse.ui.window.preferences" contextId\="org.eclipse.ui.contexts.window" keyConfigurationId\="org.eclipse.ui.defaultAcceleratorConfiguration" keySequence\="CTRL+L CTRL+L"/>\n<keyBinding contextId\="org.eclipse.ui.contexts.window" keyConfigurationId\="org.eclipse.ui.defaultAcceleratorConfiguration" keySequence\="CTRL+SHIFT+G"/>\n<keyBinding contextId\="org.eclipse.ui.contexts.window" keyConfigurationId\="org.eclipse.ui.defaultAcceleratorConfiguration" keySequence\="CTRL+SHIFT+G"/>\n<keyBinding contextId\="org.eclipse.wst.jsdt.ui.javascriptViewScope" keyConfigurationId\="org.eclipse.ui.defaultAcceleratorConfiguration" keySequence\="CTRL+SHIFT+G"/>\n<keyBinding contextId\="org.eclipse.wst.jsdt.ui.javascriptViewScope" keyConfigurationId\="org.eclipse.ui.defaultAcceleratorConfiguration" keySequence\="CTRL+SHIFT+G"/>\n<keyBinding commandId\="org.eclipse.jdt.ui.edit.text.java.create.getter.setter" contextId\="org.eclipse.ui.contexts.window" keyConfigurationId\="org.eclipse.ui.defaultAcceleratorConfiguration" keySequence\="CTRL+SHIFT+G"/>\n<keyBinding contextId\="org.eclipse.ui.textEditorScope" keyConfigurationId\="org.eclipse.ui.defaultAcceleratorConfiguration" keySequence\="CTRL+D"/>\n<keyBinding contextId\="org.eclipse.ui.textEditorScope" keyConfigurationId\="org.eclipse.ui.defaultAcceleratorConfiguration" keySequence\="CTRL+D"/>\n<keyBinding commandId\="org.eclipse.ui.edit.text.delete.line" contextId\="org.eclipse.ui.textEditorScope" keyConfigurationId\="kg.totality.core.insert_mode" keySequence\="CTRL+SHIFT+D"/>\n<keyBinding contextId\="org.eclipse.ui.contexts.window" keyConfigurationId\="org.eclipse.ui.defaultAcceleratorConfiguration" keySequence\="CTRL+U"/>\n<keyBinding contextId\="org.eclipse.ui.contexts.window" keyConfigurationId\="org.eclipse.ui.defaultAcceleratorConfiguration" keySequence\="CTRL+U"/>\n<keyBinding contextId\="org.eclipse.debug.ui.memoryview" keyConfigurationId\="org.eclipse.ui.defaultAcceleratorConfiguration" keySequence\="CTRL+W"/>\n<keyBinding contextId\="org.eclipse.debug.ui.memoryview" keyConfigurationId\="org.eclipse.ui.defaultAcceleratorConfiguration" keySequence\="CTRL+W"/>\n<keyBinding contextId\="org.eclipse.ui.contexts.dialogAndWindow" keyConfigurationId\="org.eclipse.ui.defaultAcceleratorConfiguration" keySequence\="CTRL+1"/>\n<keyBinding commandId\="org.eclipse.jdt.ui.edit.text.java.correction.assist.proposals" contextId\="org.eclipse.ui.contexts.dialogAndWindow" keyConfigurationId\="kg.totality.core.insert_mode" keySequence\="CTRL+0"/>\n</org.eclipse.ui.commands>
 /instance/org.eclipse.jdt.ui/sp_cleanup.sort_members=false
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.join_lines_in_comments=true
 /instance/ccw.core/ccw.preferences.editor_color.callableRAW_SYMBOL.bold=false
@@ -1148,8 +1149,8 @@
 /instance/org.eclipse.jdt.launching/PREF_VM_INSTALL_SYSTEM_PROPERTY.org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType.1383048743107.java.vendor=Oracle Corporation
 /instance/ccw.core/ccw.preferences.editor_color.JAVA_CLASS.bold=false
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.codeComplete.staticFinalFieldSuffixes=
-/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.brace_position_for_method_declaration=next_line
 /instance/ccw.core/ccw.preferences.editor_color.symbol.italic=false
+/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.brace_position_for_method_declaration=next_line
 /instance/com.powerflasher.fdt.ui/com.powerflasher.fdt.ui.BasicSemanticHighlightGenerator.AS3.TopLevelVariable_color=182,177,147
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_space_before_semicolon=do not insert
 /instance/org.eclipse.dltk.ruby.ui/DLTK_string.eval=255,142,141
@@ -1198,7 +1199,7 @@
 /instance/org.eclipse.wst.jsdt.ui/java_keyword=246,224,107
 /instance/org.eclipse.jdt.ui/sp_cleanup.add_generated_serial_version_id=false
 /instance/org.codehaus.groovy.eclipse.ui/semanticHighlighting.staticMethodInvocation.enabled=true
-/instance/org.eclipse.ui.workbench/ColorsAndFontsPreferencePage.expandedCategories=Torg.eclipse.ui.workbenchMisc\tTorg.eclipse.jdt.ui.presentation
+/instance/org.eclipse.ui.workbench/ColorsAndFontsPreferencePage.expandedCategories=Torg.eclipse.ui.workbenchMisc\tTorg.eclipse.jdt.ui.presentation\tTorg.eclipse.compare.contentmergeviewer.TextMergeViewer
 /instance/org.eclipse.php.ui/editorColorComment=\#67C3E7 | null | null | null | null | null
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.brace_position_for_switch=next_line
 /instance/ccw.core/ccw.preferences.editor_color.RAW_SYMBOL.bold=false
@@ -1214,6 +1215,7 @@
 @edu.umd.cs.findbugs.plugin.eclipse=2.0.3.20131122-15027
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_space_after_comma_in_method_declaration_throws=insert
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_space_between_empty_braces_in_array_initializer=do not insert
+@org.eclipse.wst.jsdt.web.core=1.0.700.v201307162035
 /instance/ccw.core/ccw.preferences.editor_color.whitespace=255,255,255
 /instance/com.powerflasher.fdt.ui/AS_INTERNAL_color=246,224,107
 /instance/org.eclipse.jdt.ui/semanticHighlighting.annotation.color=198,68,56
@@ -1222,6 +1224,7 @@
 /instance/org.codehaus.groovy.eclipse.ui/semanticHighlighting.deprecatedMember.enabled=true
 /instance/org.erlide.ui/editor/colors/string/style=0
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_space_before_comma_in_constructor_declaration_parameters=do not insert
+/instance/org.eclipse.debug.ui/org.eclipse.debug.ui.cancel_launch_with_compile_errors=always
 /instance/org.eclipse.wst.jsdt.ui/java_keyword_return=246,224,107
 /instance/edu.umd.cs.findbugs.plugin.eclipse/filter_settings=Medium|BAD_PRACTICE,CORRECTNESS,MT_CORRECTNESS,PERFORMANCE,STYLE|false|15
 /instance/org.epic.perleditor/invalidColor=255,255,255
@@ -1285,6 +1288,7 @@
 /instance/de.walware.statet.r.ui/text_R_rLogicalConstants.color=181,169,75
 @org.eclipse.core.resources=3.8.101.v20130717-0806
 /instance/ccw.core/ccw.preferences.editor_color.callableRAW_SYMBOL=255,255,255
+/instance/org.eclipse.ui.workbench/INCOMING_COLOR=30,144,255
 /instance/org.epic.perleditor/comment1Color=103,195,231
 /instance/org.codehaus.groovy.eclipse.ui/groovy.editor.groovyDoc.tag.color=153,125,196
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.indent_switchstatements_compare_to_switch=true
@@ -1377,6 +1381,7 @@
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.source=1.7
 /instance/org.eclipse.wst.jsdt.ui/tagName=255,255,255
 /instance/org.eclipse.jdt.ui/sp_cleanup.remove_trailing_whitespaces=true
+/instance/org.eclipse.wst.html.ui/html_content_assist_own_page_sort_order=org.eclipse.wst.html.ui.proposalCategory.htmlTemplates\u0000org.eclipse.wst.css.ui.proposalCategory.cssTemplates\u0000org.eclipse.wst.html.ui.proposalCategory.htmlTags\u0000org.eclipse.wst.css.ui.proposalCategory.css\u0000
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_space_after_opening_bracket_in_array_allocation_expression=do not insert
 file_export_version=3.0
 /instance/de.walware.statet.r.ui/text_R_rRoxygenTag.color=153,125,196
@@ -1531,6 +1536,7 @@ file_export_version=3.0
 /configuration/org.eclipse.ui.ide/RECENT_WORKSPACES=/home/carlo/sick/workspace_git\n/home/carlo/sick/workspace\n/home/carlo/sick/workspace_2\n/home/carlo/sick_workspace\n/home/carlo/workspace
 /instance/org.eclipse.cdt.ui/c_operators=255,255,255
 /instance/org.eclipse.wst.css.ui/SELECTOR=\#FFFFFF | null | null | null | null | null
+/instance/org.eclipse.debug.core/org.eclipse.debug.core.PREF_BREAKPOINT_MANAGER_ENABLED_STATE=true
 /instance/org.eclipse.php.ui/semanticHighlighting.org.eclipse.php.internal.ui.editor.highlighters.FunctionHighlighting.enabled=true
 /instance/org.eclipse.cdt.ui/semanticHighlighting.method.color=255,255,255
 /instance/org.eclipse.datatools.sqltools.sqleditor/Single-line\ comment=0,0,0,0,0,103,195,231
@@ -1562,7 +1568,7 @@ file_export_version=3.0
 /instance/org.eclipse.wst.xml.ui/tagAttributeValue=\#FF8E8D | null | null | null | null | null
 /instance/org.eclipse.dltk.ruby.ui/DLTK_comment_task_tag=153,125,196
 /instance/com.powerflasher.fdt.ui/com.powerflasher.fdt.ui.mxml.mxmlHighlightGenerator.AS3.MXMLNamespace_enabled=true
-/instance/org.eclipse.ui.workbench/ColorsAndFontsPreferencePage.selectedElement=Corg.eclipse.jdt.ui.ColoredLabels.inherited
+/instance/org.eclipse.ui.workbench/ColorsAndFontsPreferencePage.selectedElement=CCONFLICTING_COLOR
 /instance/org.eclipse.dltk.tcl.ui/content_assist_parameters_foreground=255,255,255
 /instance/org.eclipse.jdt.ui/sp_cleanup.qualify_static_member_accesses_with_declaring_class=false
 /instance/ccw.core/ccw.preferences.editor_color.regex.bold=false
