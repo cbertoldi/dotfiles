@@ -51,37 +51,39 @@ xterm*bellIsUrgent:   true
 
 ! First the normal color, then the bold one
 ! BLK
-#define _color0        #000000
-#define _color8        #ABABAB
+#define _color0         #000000
+#define _color8         #ABABAB
 ! RED
-#define _color1        #FC4343
-#define _color9        #FC6D6D
+#define _color1         #FC4343
+#define _color9         #FC6D6D
 ! GRN
-#define _color2        #54FC54
-#define _color10       #63F163
+#define _color2         #54FC54
+#define _color10        #63F163
 ! YEL
-#define _color3        #FFD75F
+#define _color3         #FFD75F
 !#FFD75F
-#define _color11       #F0EF78
+#define _color11        #F0EF78
 ! BLU
-#define _color4        #4096FF
-#define _color12       #0E90FF
+#define _color4         #4096FF
+#define _color12        #0E90FF
 ! MAG
-#define _color5        #FF9BFE
-#define _color13       #FFA0FE
+#define _color5         #FF9BFE
+#define _color13        #FFA0FE
 ! CYN
-#define _color6        #81CCCC
-#define _color14       #6DE7E6 
+#define _color6         #81CCCC
+#define _color14        #6DE7E6 
 ! WHT
-#define _color7        #DDDDDD
-#define _color15       #FFFFFF
+#define _color7         #C8C8C8
+#define _color15        #FFFFFF
 ! FMT
-#define _colorBD       #FFFFFF
-#define _colorUL       #FFFFFF
+#define _colorBD        #FFFFFF
+#define _colorIT        #FFFFFF	
+#define _colorUL        #FFFFFF
+#define _underlineColor #FFFFFF
 ! TXT
-#define _foreground    #C8C8C8
-#define _background    #303030
-#define _cursorColor   #DDDDDD
+#define _foreground     #C8C8C8
+#define _background     #303030
+#define _cursorColor    #DDDDDD
 ! indian red
 ! #define _cursorColor   #CD5C5C
 
@@ -103,10 +105,11 @@ URxvt*color14        : _color14
 URxvt*color15        : _color15
 URxvt*colorBD        : _colorBD
 URxvt*colorIT        : _colorIT
-URxvt*colorUL        : _colorUL
 URxvt*foreground     : _foreground
 URxvt*background     : _background
 URxvt*cursorColor    : _cursorColor
+URxvt*colorUL        : _colorUL
+URxvt*underlineColor : _underlineColor
 
 XTerm*color0         : _color0
 XTerm*color1         : _color1
@@ -132,6 +135,7 @@ XTerm*background     : _background
 XTerm*cursorColor    : _cursorColor
 
 ! fonts
+! by the way Inconsolata does not have bold or italic fonts...
 URxvt*font: xft:inconsolata:size=10.5, xft:dejavu sans mono:size=9
 URxvt*boldfont: xft:inconsolata:size=10.5, xft:dejavu sans mono:size=9
 URxvt*italicfont: xft:inconsolata:size=10.5, xft:dejavu sans mono:size=9
@@ -152,8 +156,9 @@ xterm*faceSize5   : 15
 xterm*faceSize6   : 20
 
 URxvt*scrollBar         : false
-URxvt*scrollTtyKeypress : true
 URxvt*scrollTtyOutput   : false
+URxvt*scrollWithBuffer  : true 
+URxvt*scrollTtyKeypress : true
 URxvt*urgentOnBell      : true
 
 XTerm*scrollttyoutput   : false
