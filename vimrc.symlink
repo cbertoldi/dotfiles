@@ -9,6 +9,7 @@ set incsearch
 set hlsearch
 set ignorecase
 set smartcase
+set tildeop
 set mouse=a
 syntax enable
 
