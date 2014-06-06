@@ -67,3 +67,31 @@ merge-request-apply () {
     # git push upstream master:master
 }
 alias mra="merge-request-apply"
+
+#
+# Update dev tracking branch, than rebase previous co branch
+#
+
+rebase-dev-rebase-branch () {
+	_previous_branch=$(git branch | grep \* - | cut -d " " -f 2)
+
+	git co dev
+
+	git svn rebase
+
+	git co ${_previous_branch}
+
+	git rebase dev
+}
+alias rdrb="rebase-dev-rebase-branch"
+
+merge-branch-dev () {
+	_branch=$(git branch | grep \* - | cut -d " " -f 2)
+
+	# rebase-dev-rebase-branch
+
+	git co dev
+
+	git merge ${_branch}
+}
+alias mbd="merge-branch-dev"
