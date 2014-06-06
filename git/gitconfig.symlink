@@ -22,6 +22,8 @@
         count = !git shortlog -sn
 		# diff svn revision
 		dsr = !sh -c \"git log -p -1 $(git svn find-rev r$1)\"
+	rb = rebase
+	pi = cherry-pick
 [color]
         diff = auto
         status = auto
