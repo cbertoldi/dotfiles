@@ -9,6 +9,9 @@ set -g mode-mouse on
 set -g mouse-select-window on
 set -g mouse-select-pane on
 
+# start window numbering at 1
+set -g base-index 1
+
 # this to avoid text editors clear the screen on exit
 #set-window-option -g alternate-screen on
 
