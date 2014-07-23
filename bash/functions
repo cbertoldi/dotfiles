@@ -41,7 +41,7 @@ function vared {
 # This is useful with hostnames like a1.test a1.prod
 #
 function ssh() {
-	if [ -n "$TMUX"]
+	if [ -n "$TMUX" ]
 	then
 		TERM=xterm-256color command ssh "$@" -t 'printf "\033k$(hostname -f | cut -d . -f 1,2)\033\\"; bash -l';
 		tmux set-window-option automatic-rename "on" 1>/dev/null;
