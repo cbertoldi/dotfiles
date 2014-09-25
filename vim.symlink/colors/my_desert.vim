@@ -22,7 +22,7 @@ hi FoldColumn      cterm=NONE term=standout ctermfg=180 ctermbg=239 guifg=tan gu
 hi DiffAdd         cterm=NONE ctermbg=222 ctermfg=240
 hi DiffChange      cterm=NONE ctermbg=242 ctermfg=white
 hi DiffDelete      cterm=NONE ctermbg=203 ctermfg=white 
-hi DiffText        cterm=NONE ctermbg=242 ctermfg=222
+hi DiffText        cterm=NONE ctermbg=222 ctermfg=240
 hi SignColumn      cterm=NONE term=standout ctermfg=51 ctermbg=250 guifg=Cyan guibg=Grey
 hi Conceal         cterm=NONE ctermfg=252 ctermbg=248 guifg=LightGrey guibg=DarkGrey
 hi SpellBad        cterm=NONE term=reverse cterm=undercurl gui=undercurl guisp=Red
