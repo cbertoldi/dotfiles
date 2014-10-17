@@ -6,7 +6,7 @@ then
 	. ~/.localrc
 fi
 
-UNAME=`uname -s`
+UNAME=$(uname -s)
 
 # completion
 if [ "$UNAME" == "Darwin" ]; then
@@ -16,6 +16,9 @@ if [ "$UNAME" == "Darwin" ]; then
 elif [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 		. /etc/bash_completion
 fi
+# bash_completion is unsetting uname at the end
+UNAME=$(uname -s)
+
 . $DOTFILES/bash/git-completion.bash
 . $DOTFILES/bash/rebar-completion.bash
 
@@ -59,6 +62,7 @@ then
 	export LSCOLORS="exgxcxdxcxegedabagacad"
 elif [ "$UNAME" == "Linux" ]
 then
+	export EDITOR=vim
 	export VISUAL=vim
 	export SVN_EDITOR=vim
 	export PATH=~/bin:$PATH:$ANT_HOME/bin
