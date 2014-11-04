@@ -99,6 +99,10 @@ setw -g status-right '"#T" %a %H:%M %d-%b-%y'
 set -g pane-active-border-fg colour221
 set -g pane-active-border-bg colour241
 
+# Window title
+# set -g set-titles on
+set -g set-titles-string '#S - [#T]'
+
 # copy and paste for Mac OS X
 bind C-c run "tmux save-buffer - | reattach-to-user-namespace pbcopy"
 bind C-v run "reattach-to-user-namespace pbpaste | tmux load-buffer - && tmux paste-buffer"
