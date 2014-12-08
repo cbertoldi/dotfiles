@@ -82,7 +82,7 @@ alias erl15b=". ~/.kerl/install/r15b/activate"
 export HISTSIZE=32768
 export HISTFILESIZE=$HISTSIZE HISTFILESIZE
 # commands not to be saved in  history
-export HISTIGNORE="&:ls:pwd:[bf]g:exit:j:fg [0-9]*:date:cd:cd -:cls"
+export HISTIGNORE="&:ls:pwd:[bf]g:exit:j:fg [0-9]*:date:cd:cd -:cls:.."
 export HISTCONTROL=ignoreboth
 
 # files to ignore with tab completion
