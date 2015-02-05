@@ -24,6 +24,7 @@
 		dsr = !sh -c \"git log -p -1 $(git svn find-rev r$1)\"
 	rb = rebase
 	pi = cherry-pick
+	lg = log --graph --pretty=format:'%C(yellow)%h%Creset -%C(magenta)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 [color]
         diff = auto
         status = auto
