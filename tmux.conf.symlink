@@ -107,3 +107,8 @@ set -g set-titles-string '#S - [#T]'
 # copy and paste for Mac OS X
 bind C-c run "tmux save-buffer - | reattach-to-user-namespace pbcopy"
 bind C-v run "reattach-to-user-namespace pbpaste | tmux load-buffer - && tmux paste-buffer"
+
+run-shell ~/tmux-resurrect/resurrect.tmux
+
+set -g @resurrect-save 's'
+set -g @resurrect-restore 'r'
