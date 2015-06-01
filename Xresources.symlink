@@ -175,7 +175,7 @@ URxvt.iso14755 : false
 
 URxvt.keysym.C-C: perl:clipboard:copy
 URxvt.keysym.C-V: perl:clipboard:paste
-URxvt*iconFile : /usr/share/icons/elementary-xfce/apps/128/utilities-terminal.svg
+URxvt*iconFile : /usr/share/icons/elementary-xfce/apps/128/utilities-terminal.png
 
 // URxvt spells "eightBitInput" as "meta8" and defaults it to false
 ! URxvt.meta8     : true
