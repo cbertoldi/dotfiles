@@ -22,9 +22,12 @@
         count = !git shortlog -sn
 		# diff svn revision
 		dsr = !sh -c \"git log -p -1 $(git svn find-rev r$1)\"
-	rb = rebase
-	pi = cherry-pick
-	lg = log --graph --pretty=format:'%C(yellow)%h%Creset -%C(magenta)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+		rb = rebase
+		pi = cherry-pick
+		lg = log --graph --pretty=format:'%C(yellow)%h%Creset -%C(magenta)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+		assume = update-index --assume-unchanged
+		unassume = update-index --no-assume-unchanged
+		assumed = "!git ls-files -v | grep ^h | cut -c 3-"
 [color]
         diff = auto
         status = auto
@@ -47,3 +50,5 @@
         #
         # Setting to git 2.0 default to surpress warning message
     default = matching
+[credential]
+	helper = /usr/share/doc/git/contrib/credential/gnome-keyring/git-credential-gnome-keyring
