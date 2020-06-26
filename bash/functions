@@ -118,3 +118,14 @@ merge-branch-dev () {
 	git merge ${_branch}
 }
 alias mbd="merge-branch-dev"
+
+push-current-branch-to-origin () {
+	# In order to get this to work, it's important to know that the
+	# interesting output part will redirected to stderr, even with the
+	# --porcelain option.
+	_current_branch=$(git rev-parse --abbrev-ref HEAD)
+	_output=$(git push --porcelain origin $_current_branch 2>&1)
+	echo -n "$_output"
+	echo -n "$_output" | grep pull-requests | cut -d: -f 2,3 | tr -d '[:space:]' | pbcopy
+}
+alias gpcb="push-current-branch-to-origin"
