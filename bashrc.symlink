@@ -20,7 +20,12 @@ fi
 UNAME=$(uname -s)
 
 . $DOTFILES/bash/git-completion.bash
-. $DOTFILES/bash/rebar-completion.bash
+if [ -f /opt/local/share/bash-completion/git ]
+	. /opt/local/share/bash-completion/git
+fi
+if [ -f /opt/local/share/bash-completion/rg ]
+	. /opt/local/share/bash-completion/rg
+fi
 
 . $DOTFILES/bash/aliases
 . $DOTFILES/bash/functions
@@ -28,7 +33,12 @@ UNAME=$(uname -s)
 . $DOTFILES/bash/svn-colours
 # prompt must be sourced after colours definitions
 . $DOTFILES/bash/prompt
-. $DOTFILES/bash/bash-git-prompt/gitprompt.sh
+#. $DOTFILES/bash/bash-git-prompt/gitprompt.sh
+if [ -f "$HOME/bash-git-prompt/gitprompt.sh" ]; then
+	GIT_PROMPT_ONLY_IN_REPO=1
+	GIT_PROMPT_THEME=Carlo
+	source $HOME/bash-git-prompt/gitprompt.sh
+fi
 
 export ANT_HOME=/opt/ant
 export MAVEN_HOME=/usr/share/maven
@@ -43,7 +53,11 @@ then
 	# Java
 	export JAVA_HOME=`/usr/libexec/java_home`
 	launchctl setenv PATH $PATH
-	export PATH=$DOTFILES/bin:/usr/local/git/bin:/opt/subversion/bin:$PATH:/sw/bin:/usr/local/mysql/bin:/usr/share/maven/bin:/opt/local/bin:~/bin:$PYTHONPATH:$ANT_HOME/bin
+	export PATH=~/.pyenv/bin:$DOTFILES/bin:$PATH:/usr/local/mysql/bin:/usr/share/maven/bin:/opt/local/bin:~/bin:$ANT_HOME/bin
+
+	# pyenv initialization
+	eval "$(pyenv init -)"
+	eval "$(pyenv virtualenv-init -)"
 
 	# compiler settings
 	export LDFLAGS='-L/opt/local/lib'
@@ -88,11 +102,6 @@ export HISTCONTROL=ignoreboth
 # files to ignore with tab completion
 export FIGNORE=$FIGNORE:DS_Store
 
-#export PYTHONPATH="/cygdrive/d/python"
-# python site-packages mac os 
-# /Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/
-PYTHONPATH=/Library/Frameworks/Python.framework/Versions/2.7/bin/
-
 shopt -s nocaseglob
 shopt -s cdspell
 shopt -s extglob
@@ -110,8 +119,6 @@ export GREP_OPTIONS='--color=auto'
 # highlight matches in yellow
 export GREP_COLOR='00;38;5;226'
 
-#export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/1.6/Home
-# /System/Library/Frameworks/JavaVM.framework/Home/ 1.6
 export LANG="en_US"
 export LANGUAGE="en_US"
 export LC_ALL="en_US.UTF-8"
@@ -133,9 +140,14 @@ then
 	export TERM="cygwin"
 fi
 
-if [ "$UNAME" == "Darwin" ]
-then
-	growl() { echo -e $'\e]9;'${1}'\007' ; return ; }
-
-	growl "Scemo chi legge"
+if [ -f ~/.ripgreprc ]; then
+	export RIPGREP_CONFIG_PATH=~/.ripgreprc
 fi
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export TF_PLUGIN_CACHE_DIR="$HOME/.terraform_cache"
+
+complete -C /Users/e2592jv/bin/terraform terraform
