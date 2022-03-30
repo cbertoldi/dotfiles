@@ -4,4 +4,7 @@ impex:*.{impex}*
 --type-add
 property:*.{properties}*
 
+--type-add
+jsp:*.{jsp,tag}
+
 --smart-case
