@@ -21,9 +21,12 @@ UNAME=$(uname -s)
 
 . $DOTFILES/bash/git-completion.bash
 if [ -f /opt/local/share/bash-completion/git ]
+then
 	. /opt/local/share/bash-completion/git
 fi
+
 if [ -f /opt/local/share/bash-completion/rg ]
+then
 	. /opt/local/share/bash-completion/rg
 fi
 
