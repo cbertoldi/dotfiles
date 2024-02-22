@@ -43,11 +43,6 @@ if [ -f "$HOME/bash-git-prompt/gitprompt.sh" ]; then
 	source $HOME/bash-git-prompt/gitprompt.sh
 fi
 
-export ANT_HOME=/opt/ant
-export MAVEN_HOME=/usr/share/maven
-export JBOSS_HOME=~/jboss-5.1.0.GA
-export RLWRAP_HOME=~/rlwrap
-
 # mac 
 if [ "$UNAME" == "Darwin" ]
 then
@@ -56,11 +51,11 @@ then
 	# Java
 	export JAVA_HOME=`/usr/libexec/java_home`
 	launchctl setenv PATH $PATH
-	export PATH=~/.pyenv/bin:$DOTFILES/bin:$PATH:/usr/local/mysql/bin:/usr/share/maven/bin:/opt/local/bin:~/bin:$ANT_HOME/bin
+	export PATH=~/.pyenv/bin:$DOTFILES/bin:$PATH:/usr/local/mysql/bin::/opt/local/bin:~/bin:$ANT_HOME/bin:$HOME/.istioctl/bin:$PATH
 
 	# pyenv initialization
-	eval "$(pyenv init -)"
-	eval "$(pyenv virtualenv-init -)"
+	#eval "$(pyenv init -)"
+	#eval "$(pyenv virtualenv-init -)"
 
 	# compiler settings
 	export LDFLAGS='-L/opt/local/lib'
@@ -100,7 +95,7 @@ export HISTSIZE=32768
 export HISTFILESIZE=$HISTSIZE HISTFILESIZE
 # commands not to be saved in  history
 export HISTIGNORE="&:ls:pwd:[bf]g:exit:j:fg [0-9]*:date:cd:cd -:cls:.."
-export HISTCONTROL=ignoreboth
+export HISTCONTROL=ignoreboth:erasedups
 
 # files to ignore with tab completion
 export FIGNORE=$FIGNORE:DS_Store
@@ -108,6 +103,7 @@ export FIGNORE=$FIGNORE:DS_Store
 shopt -s nocaseglob
 shopt -s cdspell
 shopt -s extglob
+shopt -s histappend
 
 # Enable some Bash 4 features when possible:
 # * `autocd`, e.g. `**/qux` will enter `./foo/bar/baz/qux`
@@ -153,4 +149,4 @@ export NVM_DIR="$HOME/.nvm"
 
 export TF_PLUGIN_CACHE_DIR="$HOME/.terraform_cache"
 
-complete -C /Users/e2592jv/bin/terraform terraform
+complete -C ~/bin/terraform terraform
