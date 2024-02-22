@@ -32,5 +32,6 @@ then
 	alias view="/Applications/MacVim.app/Contents/MacOS/Vim -R"
 	alias vimdiff="/Applications/MacVim.app/Contents/MacOS/Vim -d"
 	alias mplayer="/Applications/MPlayer\ OSX\ Extended.app/Contents/Resources/Binaries/mpextended.mpBinaries/Contents/MacOS/mplayer"
-	alias python="/usr/local/bin/python"
+	alias tfswitch="tfswitch -b $HOME/bin/terraform"
+	alias tac="tail -r"
 fi
