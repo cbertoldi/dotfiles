@@ -1,2 +1,4 @@
 # always load it
 . ~/.bashrc
+
+export DISPLAY=:0
