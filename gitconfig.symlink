@@ -5,22 +5,49 @@
 	diff = auto
 	status = auto
 	branch = auto
+	ui = true
 [core]
 	excludesfile = ~/.gitignore_global
 	editor = mvim -v
 	ignorecase = false
+	autocrlf = input
 [alias]
 	co = checkout
 	br = branch
 	ci = commit
 	st = status
+	sw = switch
 	unstage = reset HEAD --
 	last = log -1 HEAD
 	vimdiff = "!GIT_PAGER=" GIT_EXTERNAL_DIFF="git_diff_wrapper git diff" 
     rmb = "!f(){ git branch -d ${1} && git push origin --delete ${1}; };f"
+	promote = !$DOTFILES/bin/git-promote
+	wtf = !$DOTFILES/bin/git-wtf
+	rank-contributers = !$DOTFILES/bin/git-rank-contributers
+	count = !git shortlog -sn
+	# diff svn revision
+	dsr = !sh -c \"git log -p -1 $(git svn find-rev r$1)\"
+	rb = rebase
+	pi = cherry-pick
+	lg = log --graph --pretty=format:'%C(yellow)%h%Creset -%C(magenta)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	assume = update-index --assume-unchanged
+	unassume = update-index --no-assume-unchanged
+	assumed = "!git ls-files -v | grep ^h | cut -c 3-"
+[pager]
+	diff = /opt/local/share/git/contrib/diff-highlight/diff-highlight | /opt/local/bin/less -F
+[merge]
+	conflictstyle = diff3
+[core]
+	editor = vim
+[apply]
+        whitespace = nowarn
+[mergetool]
+	keepBackup = true
 [help]
 	autocorrect = 1
+[credential]
+	helper = osxkeychain
 [difftool]
 	prompt = false
 [push]
-	default = tracking
+	default = simple
