@@ -28,7 +28,7 @@ if has('win32') || has('win64')
 	let $HOME = $USERPROFILE
     set runtimepath=$HOME/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after
 	
- 	set guifont=Consolas:h10:cDEFAULT
+	set guifont=Consolas:h12:cDEFAULT
 	" Yes, it says that Windows is totally bullshit! :[
 	set bs=2
 	set clipboard=unnamed
