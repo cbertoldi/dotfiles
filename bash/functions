@@ -129,3 +129,7 @@ push-current-branch-to-origin () {
 	echo -n "$_output" | grep pull-requests | cut -d: -f 2,3 | tr -d '[:space:]' | pbcopy
 }
 alias gpcb="push-current-branch-to-origin"
+
+jwt-decode() {
+  jq -R 'split(".") |.[0:2] | map(@base64d) | map(fromjson)' <<< $1
+}
